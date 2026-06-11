@@ -1,0 +1,103 @@
+.aboutHero {
+  padding: 80px 80px 0;
+}
+.aboutHero .bracketLabel {
+  margin-bottom: 48px;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  padding: 0 80px 64px;
+}
+
+.bioText {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+.bioText strong { font-weight: 700; }
+
+.photoPlaceholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-placeholder);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 12px,
+    rgba(255,255,255,0.5) 12px,
+    rgba(255,255,255,0.5) 13px
+  );
+  border-radius: 16px;
+}
+
+.quoteSection {
+  padding: 56px 80px 80px;
+  border-top: 1px solid var(--border);
+}
+.quoteMark {
+  font-size: 80px;
+  font-weight: 800;
+  color: var(--border);
+  line-height: 0.6;
+  margin-bottom: 24px;
+  display: block;
+  font-family: Georgia, serif;
+}
+.quoteText {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.quoteAttr {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.skillsSection { padding: 0 80px 80px; }
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.skillCard {
+  background: var(--bg-soft);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.skillCard h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.skillList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.skillList li {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .aboutHero { padding: 48px 24px 0; }
+  .aboutGrid { grid-template-columns: 1fr; padding: 0 24px 48px; gap: 32px; }
+  .photoCol { order: -1; }
+  .photoPlaceholder { aspect-ratio: 4/3; }
+  .quoteSection { padding: 40px 24px 60px; }
+  .skillsSection { padding: 0 24px 60px; }
+  .skillsGrid { grid-template-columns: 1fr; }
+}
