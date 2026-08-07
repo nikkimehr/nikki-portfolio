@@ -1,24 +1,19 @@
 import { NextResponse } from 'next/server'
 
 export function middleware(request) {
-  const basicAuth = request.headers.get('authorization')
-  
-  if (basicAuth) {
-    const auth = basicAuth.split(' ')[1]
-    const [user, password] = atob(auth).split(':')
-    if (password === 'KiwiLeo') {
-      return NextResponse.next()
-    }
+  const authCookie = request.cookies.get('portfolio_auth')
+
+  if (authCookie?.value === 'granted') {
+    return NextResponse.next()
   }
 
-  return new NextResponse('Protected', {
-    status: 401,
-    headers: {
-      'WWW-Authenticate': 'Basic realm="Portfolio"',
-    },
-  })
+  const url = request.nextUrl.clone()
+  url.pathname = '/locked'
+  return NextResponse.rewrite(url)
 }
 
 export const config = {
-  matcher: ['/((?!_next|favicon.ico).*)'],
+  // Runs on every request except static assets, the lock page itself,
+  // and the unlock API route (those would otherwise redirect in a loop).
+  matcher: ['/((?!_next|favicon.ico|locked|api/unlock).*)'],
 }

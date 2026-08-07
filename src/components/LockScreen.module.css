@@ -1,0 +1,111 @@
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: var(--bg);
+}
+
+.content {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.icon {
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.instruction {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  margin-bottom: 28px;
+}
+
+.inputWrap {
+  position: relative;
+  margin: 0 0 14px;
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 0 44px 0 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--navy);
+  box-sizing: border-box;
+  display: block;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+
+.eyeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 44px;
+  width: 44px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.button {
+  width: 100%;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  font-size: 13px;
+  color: #a32d2d;
+  margin-top: 12px;
+}
+
+.footer {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 24px;
+}
+
+.link {
+  color: var(--blue-link);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
