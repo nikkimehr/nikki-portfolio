@@ -48,8 +48,8 @@ export default function Home() {
 
   return (
     <>
-      <Nav />
-
+    <div className={styles.heroWrap}>     
+     <Nav />
       <section className={styles.hero}>
         <h1>Hi there! I&apos;m Nikki.</h1>
         <p>
@@ -59,6 +59,7 @@ export default function Home() {
           </a>
         </p>
       </section>
+      </div>
 
       <section className={styles.workSection} id="work">
         <p className={`bracket-label ${styles.sectionLabel}`}>Selected Work</p>

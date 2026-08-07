@@ -24,6 +24,31 @@
 }
 .hero p a:hover { text-decoration: underline; }
 
+.heroWrap {
+  position: relative;
+}
+ 
+.heroWrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  height: 700px;
+  background: linear-gradient(
+    180deg,
+    rgba(124, 58, 237, 0.035) 0%,
+    rgba(124, 58, 237, 0.015) 45%,
+    rgba(124, 58, 237, 0) 75%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+ 
+.heroWrap > * {
+  position: relative;
+  z-index: 1;
+}
+
+
 /* ── WORK SECTION ── */
 .workSection { padding: 0 80px 80px; }
 

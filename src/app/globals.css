@@ -105,27 +105,40 @@ nav {
 footer {
   text-align: center;
   padding: 80px 80px 60px;
-  border-top: 1px solid var(--border);
+  background: var(--navy);
 }
 .footer-sub {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-.footer-email {
-  font-size: clamp(18px, 3.5vw, 18px);
+  color: var(--blue-secondary);
+  margin-bottom: 24px;
+
+  font-size: 16px;
   font-weight: 800;
-  color: var(--navy);
-  letter-spacing: -0.03em;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--navy);
-  transition: opacity 0.15s;
+
+ 
+  
 }
-.footer-email:hover { opacity: 0.7; }
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.footer-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.footer-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
 
 @media (max-width: 768px) {
   nav { padding: 20px 24px; }
