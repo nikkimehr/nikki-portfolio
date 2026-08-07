@@ -36,11 +36,11 @@
 }
 
 /* ── FEATURED CARD ── */
-.cardFeatured {
+ .cardFeatured {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid var(--border-card);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: 20px;
   cursor: pointer;
@@ -53,7 +53,7 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 .cardImage {
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   background: var(--bg-placeholder);
   background-image: repeating-linear-gradient(
     -45deg,
@@ -62,7 +62,7 @@
     rgba(255,255,255,0.55) 12px,
     rgba(255,255,255,0.55) 13px
   );
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   margin: 20px;
 }
 .cardContent {
@@ -89,7 +89,7 @@
 }
 .card {
   border: 1px solid var(--border-card);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;
@@ -102,7 +102,7 @@
 }
 .cardImageSmall {
   width: calc(100% - 24px);
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   background: var(--bg-placeholder);
   background-image: repeating-linear-gradient(
     -45deg,
@@ -111,7 +111,7 @@
     rgba(255,255,255,0.55) 12px,
     rgba(255,255,255,0.55) 13px
   );
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   margin: 12px 12px 0;
 }
 .cardTitleSmall {

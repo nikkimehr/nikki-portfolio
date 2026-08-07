@@ -5,51 +5,45 @@ import styles from './page.module.css'
 
 const projects = [
   {
-    slug: 'dynamic-logic-system',
+    slug: 'gig-fit-check',
     company: 'Roadie',
     title: "Reframing a sizing problem into Roadie's first dynamic logic system",
     tags: ['0–1', 'Mobile'],
-    featured: true,
   },
-  {
-    slug: 'vehicle-data-foundation',
-    company: 'Roadie',
-    title: 'Multi-phase effort to collect & build vehicle data foundation',
-    tags: ['Mobile', 'Web'],
-    featured: false,
-  },
-  {
-    slug: 'gig-matching-system',
+   {
+    slug: 'find-me-gigs',
     company: 'Roadie',
     title: 'Gig-matching system that notifies drivers of compatible deliveries',
     tags: ['0–1', 'Mobile'],
-    featured: false,
+  },
+  {
+    slug: 'vehicle-data-collection',
+    company: 'Roadie',
+    title: 'Multi-phase effort to collect & build vehicle data foundation',
+    tags: ['Mobile', 'Web'],
   },
   {
     slug: 'verizon-smart-family',
     company: 'Publicis Sapient | Verizon Smart Family',
-    title: 'Redesigning the location tracking and pick me up features',
+    title: 'Elevating a premium offering into a complete family location experience',
     tags: ['Client Work', 'Mobile'],
-    featured: false,
   },
   {
-    slug: 'verizon-cloud',
+    slug: 'verizon-cloud-offboarding',
     company: 'Publicis Sapient | Verizon Cloud',
-    title: 'Redesigning the offboarding & plan cancellation experience.',
+    title: 'Turning a destructive action into an informed offboarding experience',
     tags: ['Client Work', 'Mobile', 'Web'],
-    featured: false,
   },
   {
-    slug: 'driver-tier-research',
-    company: 'Roadie',
-    title: "Reframing a sizing problem into Roadie's first dynamic logic system",
-    tags: ['0–1', 'Research', 'Mobile'],
-    featured: true,
+    slug: 'verizon-smart-family-onboarding',
+    company: 'Publicis Sapient | Verizon Smart Family',
+    title: "Building trust into Smart Family's onboarding experience",
+    tags: ['Client Work', 'Mobile'],
   },
 ]
 
 export default function Home() {
-  const featuredProjects = projects.filter(p => p.featured)
+ // const featuredProjects = projects.filter(p => p.featured)
   const gridProjects = projects.filter(p => !p.featured)
 
   return (
@@ -59,32 +53,15 @@ export default function Home() {
       <section className={styles.hero}>
         <h1>Hi there! I&apos;m Nikki.</h1>
         <p>
-          Product designer based in Atlanta, Georgia. Currently at{' '}
+          Product designer based in Atlanta, Georgia. Currently leading design for the Driver app at{' '}
           <a href="https://www.roadie.com" target="_blank" rel="noopener noreferrer">
-            Roadie
+            Roadie.
           </a>
-          , leading design for the Driver app.
         </p>
       </section>
 
       <section className={styles.workSection} id="work">
         <p className={`bracket-label ${styles.sectionLabel}`}>Selected Work</p>
-
-        {/* First featured card */}
-        <Link href={`/work/${featuredProjects[0].slug}`} className={styles.cardFeatured}>
-          <div className={styles.cardImage} />
-          <div className={styles.cardContent}>
-            <p className={styles.cardCompany}>{featuredProjects[0].company}</p>
-            <h2 className={styles.cardTitle}>{featuredProjects[0].title}</h2>
-            <div className="tags">
-              {featuredProjects[0].tags.map(tag => (
-                <span key={tag} className="tag">{tag}</span>
-              ))}
-            </div>
-          </div>
-        </Link>
-
-        {/* 2-column grid */}
         <div className={styles.cardsGrid}>
           {gridProjects.map(project => (
             <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
@@ -102,19 +79,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Second featured card */}
-        <Link href={`/work/${featuredProjects[1].slug}`} className={styles.cardFeatured}>
-          <div className={styles.cardImage} />
-          <div className={styles.cardContent}>
-            <p className={styles.cardCompany}>{featuredProjects[1].company}</p>
-            <h2 className={styles.cardTitle}>{featuredProjects[1].title}</h2>
-            <div className="tags">
-              {featuredProjects[1].tags.map(tag => (
-                <span key={tag} className="tag">{tag}</span>
-              ))}
-            </div>
-          </div>
-        </Link>
       </section>
 
       <Footer />

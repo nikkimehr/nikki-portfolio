@@ -11,12 +11,33 @@
   --bg-placeholder: #e4e6e9;
   --text-primary: #0d1b2a;
   --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
+  --text-muted: #4c535e;
   --border: #e5e7eb;
   --border-card: #e9eaec;
   --tag-border: #d1d5db;
-  --tag-text: #374151;
+  --tag-text: #ffffff;
   --blue-link: #1e5fad;
+
+  /* shared surface fills (case studies + homepage) */
+  --surface-card: #f4f4f5;
+  --surface-accent: #f2f4f9;
+  --surface-placeholder: #e8e8e8;
+
+  /* semantic colors — base is for icons/plain text, -strong is for text on a tinted pill background (extra contrast) */
+  --color-success: #0f6e56;
+  --color-success-bg: #e1f5ee;
+  --color-success-strong: #085041;
+  --color-warning: #854f0b;
+  --color-warning-bg: #faeeda;
+  --color-warning-strong: #633806;
+  --color-info: #3c3489;
+  --color-info-bg: #eeedfe;
+
+  /* radius scale */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 99px;
 }
 
 body {
@@ -65,7 +86,7 @@ nav {
   font-size: 12px;
   font-weight: 400;
   color: var(--tag-text);
-  border: 1px solid var(--tag-border);
+  background: var(--navy);
   border-radius: 99px;
   padding: 4px 12px;
   line-height: 1.4;
@@ -92,7 +113,7 @@ footer {
   margin-bottom: 16px;
 }
 .footer-email {
-  font-size: clamp(22px, 3.5vw, 38px);
+  font-size: clamp(18px, 3.5vw, 18px);
   font-weight: 800;
   color: var(--navy);
   letter-spacing: -0.03em;
