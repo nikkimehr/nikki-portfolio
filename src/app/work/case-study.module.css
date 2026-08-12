@@ -198,6 +198,23 @@
   color: var(--text-tertiary);
 }
 
+/* IMPACT — two-column "why it mattered / validated outcomes" layout */
+.impactIntro { font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 32px; }
+.impactCols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.impactColHeading { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px; }
+.impactPredictedList { display: flex; flex-direction: column; gap: 12px; }
+.impactPredictedItem { font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
+.impactValidatedIntro { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px; }
+.impactStatCard { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 16px; }
+.impactStatCard:last-child { margin-bottom: 0; }
+.impactStatNum { font-size: 30px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.impactStatTitle { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.impactStatDesc { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+  .impactCols { grid-template-columns: 1fr; gap: 28px; }
+}
+
 /* GENERIC CARD (findings, principles, learnings, outcomes) */
 .cardGrid3 {
   display: grid;
@@ -576,6 +593,123 @@
 .callout p { font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.5; margin-bottom: 6px; }
 .callout span { font-size: 12px; color: var(--text-tertiary); font-style: italic; }
 
+/* PHASE SECTIONS — full-bleed, alternating tint, screens row + toggle below */
+.phaseSection { padding: 64px 80px; }
+.phaseTintA { background: var(--surface-accent); }
+.phaseTintB { background: var(--surface-card); }
+.phaseInner { max-width: 640px; margin: 0 auto; text-align: center; }
+.phaseEyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--blue-primary);
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.phaseSectionTitle { font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 28px; letter-spacing: -0.01em; }
+.phaseScreens {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 0;
+}
+.phaseScreen {
+  height: 320px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  display: block;
+}
+.phaseToggle {
+  display: flex;
+  width: 280px;
+  margin: 20px auto 28px;
+  background: rgba(0,0,0,0.8);
+  border-radius: var(--radius-pill);
+  padding: 6px;
+}
+.phaseBody { font-size: 14px; line-height: 1.75; color: var(--text-secondary); max-width: 480px; margin: 0 auto 24px; }
+.phaseMetrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 220px)); gap: 12px; max-width: 480px; margin: 0 auto; text-align: left; }
+.phaseMetricCard { background: #fff; border-radius: var(--radius-md); padding: 16px 18px; }
+.phaseMetricValue { font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.phaseMetricLabel { font-size: 12px; line-height: 1.5; color: var(--text-secondary); }
+.phaseScreenPlaceholder {
+  height: 320px;
+  width: 220px;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1.5px dashed var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .phaseSection { padding: 40px 24px; }
+  .phaseScreen, .phaseScreenPlaceholder { height: 220px; }
+  .phaseMetrics { grid-template-columns: 1fr; }
+}
+
+/* GIG FIT CHECK — solution phases, full-bleed blue, no toggle, no inner wrapper */
+.gfcPhase { padding: 64px 80px; background: var(--surface-accent); }
+.gfcPhaseGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.gfcPhaseVisual { display: flex; flex-direction: column; gap: 16px; }
+.gfcPill {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--blue-primary);
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.gfcTitle { font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 12px; letter-spacing: -0.01em; }
+.gfcBody { font-size: 14px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px; }
+.gfcFitList { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.gfcFitItem { display: flex; gap: 10px; align-items: flex-start; }
+.gfcFitDot { width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+.gfcFitTitle { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.gfcFitDesc { font-size: 12px; line-height: 1.6; color: var(--text-secondary); }
+.gfcScreens { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 0; }
+.gfcScreen { height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-md); display: block; }
+.gfcScreenPlaceholder {
+  height: 320px;
+  width: 220px;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1.5px dashed var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 12px;
+}
+.gfcMetric { display: inline-block; background: #fff; border-radius: var(--radius-md); padding: 16px 18px; min-width: 180px; }
+.gfcMetricValue { font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.gfcMetricLabel { font-size: 12px; line-height: 1.5; color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+  .gfcPhase { padding: 40px 24px; }
+  .gfcPhaseGrid { grid-template-columns: 1fr; gap: 24px; }
+  .gfcScreen, .gfcScreenPlaceholder { height: 220px; }
+}
+
 /* ============================================
    FIND ME GIGS — unique
    ============================================ */
@@ -587,25 +721,53 @@
 .chipTitle { font-size: 12px; font-weight: 600; margin-bottom: 3px; }
 .chipBody { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 .abGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 1.5rem 0; }
-.abCard { background: var(--surface-card); border-radius: var(--radius-md); padding: 1rem; }
-.abLabelWinner { font-size: 12px; font-weight: 600; color: var(--color-success); margin-bottom: 8px; }
-.abLabelLoser { font-size: 12px; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px; }
-.abScreen { background: var(--surface-placeholder); border-radius: var(--radius-sm); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-tertiary); margin-bottom: 8px; }
-.abResultWin { font-size: 12px; font-weight: 600; color: var(--color-success); }
-.abResultLose { font-size: 12px; font-weight: 600; color: var(--text-secondary); }
+.abCard { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 1rem; }
+.abCardWinner { border: 1.5px solid var(--color-success); }
+.abLabelWinner {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-success);
+  background: var(--color-success-bg);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  margin-bottom: 10px;
+}
+.abLabelLoser {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--surface-card);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  margin-bottom: 10px;
+}
+.abScreen { background: var(--surface-placeholder); border: 0.5px solid var(--border); border-radius: var(--radius-sm); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-tertiary); margin-bottom: 10px; }
+.abResultWin { font-size: 12px; font-weight: 600; color: var(--navy); padding-top: 8px; border-top: 0.5px solid var(--border); }
+.abResultLose { font-size: 12px; font-weight: 600; color: var(--text-secondary); padding-top: 8px; border-top: 0.5px solid var(--border); }
+.abCardStats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 0.5px dashed var(--border); }
+.abCardStatNum { font-size: 15px; font-weight: 600; color: var(--navy); margin: 0 0 2px; }
+.abCardStatLabel { font-size: 10px; color: var(--text-secondary); line-height: 1.4; margin: 0; }
 .metricsRow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 1.5rem 0; }
-.metricSmall { background: var(--surface-card); border-radius: var(--radius-md); padding: 16px; text-align: center; }
-.metricSmallNum { font-size: 20px; font-weight: 600; margin: 0 0 6px; }
+.metricSmall { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 16px; text-align: center; }
+.metricSmallNum { font-size: 20px; font-weight: 600; margin: 0 0 6px; color: var(--navy); }
 .metricSmallLabel { font-size: 11px; color: var(--text-secondary); line-height: 1.4; margin: 0; }
 .abResearch { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
 .abResearchLabel { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; color: var(--blue-primary); margin-bottom: 6px; }
 .abResearchSub { font-size: 15px; font-weight: 600; margin-bottom: 1rem; color: var(--navy); }
+.abTestColHeading { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+.abTestWhyList { display: flex; flex-direction: column; gap: 10px; max-width: 640px; }
+.abTestWhyItem { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+.abTestValidatedIntro { font-size: 13px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 16px; }
 .offerFlowLarge { margin: 2rem 0; padding-top: 1rem; }
 .offerFlowLargeTitle { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
 .offerFlowLargeDesc { font-size: 14px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 1.25rem; }
-.toggleEvolution { border-radius: var(--radius-md); overflow: hidden; margin: 1.5rem 0; }
-.toggleIter { display: grid; grid-template-columns: 1fr 1fr; }
-.toggleIter:not(:last-child) { border-bottom: 0.5px solid var(--border); }
+.toggleEvolution { display: flex; flex-direction: column; gap: 12px; margin: 1.5rem 0; }
+.toggleIter { display: grid; grid-template-columns: 1fr 1fr; border: 0.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
 .toggleIterFinal { background: rgba(30,95,173,0.04); }
 .toggleIterImage { background: var(--surface-placeholder); min-height: 140px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-tertiary); padding: 16px; text-align: center; border-right: 0.5px solid var(--border); background-image: repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255,255,255,0.55) 12px, rgba(255,255,255,0.55) 13px); }
 .toggleIterMeta { padding: 20px; display: flex; flex-direction: column; justify-content: center; gap: 6px; }
@@ -613,7 +775,7 @@
 .toggleIterLabelFinal { font-size: 12px; font-weight: 600; color: var(--blue-primary); }
 .toggleIterPro { font-size: 12px; color: var(--color-success); display: flex; align-items: flex-start; gap: 5px; }
 .toggleIterCon { font-size: 12px; color: var(--color-warning); display: flex; align-items: flex-start; gap: 5px; }
-.toggleIterArrow { text-align: center; padding: 8px; font-size: 14px; color: var(--text-tertiary); background: var(--surface-card); border-bottom: 0.5px solid var(--border); }
+.toggleIterArrow { text-align: center; padding: 4px; font-size: 14px; color: var(--text-tertiary); }
 .visionSteps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 1rem; }
 .visionStep { background: var(--surface-card); border-radius: var(--radius-sm); padding: 1rem; }
 .vstepTitle { font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--navy); }

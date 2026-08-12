@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
@@ -6,6 +7,22 @@ import styles from '../case-study.module.css'
 
 export const metadata = {
   title: 'Gig Fit Check — Nikki Mehrjerdian',
+}
+
+// Add/remove paths as needed — up to 4 per phase, rendered left to right at
+// equal height with no background/card behind them.
+const phase1Screens = ['/images/gig-fit-check/phase1-screen1.png']
+const phase2Screens = ['/images/gig-fit-check/phase2-screen1.png']
+const phase3Screens = ['/images/gig-fit-check/phase3-screen1.png']
+
+function PhaseScreens({ screens }) {
+  return (
+    <div className={styles.gfcScreens}>
+      {screens.map((src, i) => (
+        <Image key={src + i} src={src} alt="" width={240} height={320} unoptimized className={styles.gfcScreen} />
+      ))}
+    </div>
+  )
 }
 
 export default function GigFitCheck() {
@@ -84,7 +101,7 @@ export default function GigFitCheck() {
         <p className={styles.secEyebrow}>OUTCOME</p>
         <p className={styles.secHeading}>Gig Fit Check</p>
         <p className={styles.bodyText}>Determining fit based on vehicle volume, available capacity and item volume. Dynamic and streamlined approach to decisively communicate to drivers if they're fit to take on a Gig before offering. A critical precursor to this initiative was a project I previously shipped to collect driver VINs and proof of insurance. By verifying the exact vehicles in use on the platform, we established the necessary data foundation to move away from the previous T-shirt sizes. This groundwork allowed us to use a driver's verified vehicle data as the baseline for assessing capacity within the Fit Check logic.</p>
-        <div className={styles.imagePlaceholder} />
+        <Image src="/images/gig-fit-check/outcome-overview.png" alt="Gig Fit Check overview" width={900} height={500} unoptimized className={styles.imagePlaceholder} />
       </section>
 
  {/* IMPACT */}
@@ -165,11 +182,11 @@ export default function GigFitCheck() {
         <div className={styles.explorationRow}>
           <div className={styles.explorationItem}>
             <p className={styles.explorationTitle}>Vehicle Size Requirement</p>
-            <div className={styles.explorationImage}>[Insert: Vehicle Size Requirement exploration screens]</div>
+            <Image src="/images/gig-fit-check/exploration-vehicle-size.png" alt="Vehicle size requirement exploration screens" width={500} height={700} unoptimized className={styles.explorationImage} />
           </div>
           <div className={styles.explorationItem}>
             <p className={styles.explorationTitle}>Volume Tags & Gig Filters</p>
-            <div className={styles.explorationImage}>[Insert: Volume Tags & Gig Filters exploration screens]</div>
+            <Image src="/images/gig-fit-check/exploration-volume-tags.png" alt="Volume tags and gig filters exploration screens" width={500} height={700} unoptimized className={styles.explorationImage} />
           </div>
         </div>
       </section>
@@ -196,57 +213,84 @@ export default function GigFitCheck() {
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>THE SOLUTION: PHASED IMPLEMENTATION</p>
         <p className={styles.bodyText}>The initial plan was to release Fit Check as a standalone feature. However, usability testing revealed a fundamental flaw: drivers didn't trust the system due to existing discrepancies around dimensions and sizes, and a lack of insight into items being picked up. To bridge this confidence gap, I pitched a phased approach that would ease drivers away from the existing t-shirt sizes while introducing new features along the way to build their trust. Given the scope of this cross-team effort, I also advocated for phasing to protect engineering's time to solve the sizing logic right, rather than compress it under pressure.</p>
+      </section>
 
-        <div className={styles.phase}>
-          <div className={styles.phaseText}>
-            <span className={`${styles.pill} ${styles.pillBlue}`}>PHASE 1</span>
-            <p className={styles.phaseTitle}>Remove Size Tags, Introduce Item Descriptor Tags</p>
-            <p className={styles.bodyText}>One of the new initiatives I advocated for was introducing Item Descriptors to better highlight specific item characteristics, serving as the foundation for the entire rollout. Introducing three specific characteristic tags based on user feedback to improve item descriptions. Surface tags in correlation to items they are tied to in order to provide better guidance to drivers.</p>
+      {/* PHASE 1 */}
+      <section className={styles.gfcPhase}>
+        <div className={styles.gfcPhaseGrid}>
+          <div>
+            <span className={styles.gfcPill}>PHASE 1</span>
+            <p className={styles.gfcTitle}>Remove Size Tags, Introduce Item Descriptor Tags</p>
+            <p className={styles.gfcBody}>One of the new initiatives I advocated for was introducing Item Descriptors to better highlight specific item characteristics, serving as the foundation for the entire rollout. Introducing three specific characteristic tags based on user feedback to improve item descriptions. Surface tags in correlation to items they are tied to in order to provide better guidance to drivers.</p>
           </div>
-          <div className={styles.phaseImage}>[Insert: Phase 1 screens]</div>
-        </div>
-
-        <div className={styles.phase}>
-          <div className={styles.phaseText}>
-            <span className={`${styles.pill} ${styles.pillBlue}`}>PHASE 2</span>
-            <p className={styles.phaseTitle}>Removal of All Gig Sizes</p>
-            <p className={styles.bodyText}>Deprecate the T-shirt size labels to eliminate reliance on misleading descriptions and reduce support tickets when discrepancies occur between the sizes and the items at pickup</p>
-            <p className={styles.bodyText}>This was a particularly sensitive area for our support and internal teams, so I worked with product to incrementally phase out the old sizes over several months, rather than all at once, to avoid a spike in support volume.</p>
-
+          <div className={styles.gfcPhaseVisual}>
+            <PhaseScreens screens={phase1Screens} />
+            <div className={styles.gfcMetric}>
+              <p className={styles.gfcMetricValue}>[Metric 1]</p>
+              <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
+            </div>
           </div>
-          <div className={styles.phaseImage}>[Insert: Phase 2 screens]</div>
         </div>
+      </section>
 
-        <div className={styles.phase}>
-          <div className={styles.phaseText}>
-            <span className={`${styles.pill} ${styles.pillBlue}`}>PHASE 3</span>
-            <p className={styles.phaseTitle}>Gig Fit Check</p>
-            <p className={styles.bodyText}>Launch the final automated logic that decisively communicate to drivers if they're fit to take on a Gig before offering.</p>
-            <div className={styles.fitStates}>
-              <div className={styles.fitState}>
-                <span className={styles.fitDot} style={{ background: '#0f6e56' }} />
+      {/* PHASE 2 */}
+      <section className={styles.gfcPhase}>
+        <div className={styles.gfcPhaseGrid}>
+          <div>
+            <span className={styles.gfcPill}>PHASE 2</span>
+            <p className={styles.gfcTitle}>Removal of All Gig Sizes</p>
+            <p className={styles.gfcBody}>Deprecate the T-shirt size labels to eliminate reliance on misleading descriptions and reduce support tickets when discrepancies occur between the sizes and the items at pickup.</p>
+            <p className={styles.gfcBody}>This was a particularly sensitive area for our support and internal teams, so I worked with product to incrementally phase out the old sizes over several months, rather than all at once, to avoid a spike in support volume.</p>
+          </div>
+          <div className={styles.gfcPhaseVisual}>
+            <PhaseScreens screens={phase2Screens} />
+            <div className={styles.gfcMetric}>
+              <p className={styles.gfcMetricValue}>[Metric 1]</p>
+              <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PHASE 3 */}
+      <section className={styles.gfcPhase}>
+        <div className={styles.gfcPhaseGrid}>
+          <div>
+            <span className={styles.gfcPill}>PHASE 3</span>
+            <p className={styles.gfcTitle}>Gig Fit Check</p>
+            <p className={styles.gfcBody}>Launch the final automated logic that decisively communicate to drivers if they're fit to take on a Gig before offering.</p>
+
+            <div className={styles.gfcFitList}>
+              <div className={styles.gfcFitItem}>
+                <span className={styles.gfcFitDot} style={{ background: '#0f6e56' }} />
                 <div>
-                  <p className={styles.fitStateTitle}>Easy Fit</p>
-                  <p className={styles.fitStateDesc}>Items should fit without any issues in the active vehicle</p>
+                  <p className={styles.gfcFitTitle}>Easy Fit</p>
+                  <p className={styles.gfcFitDesc}>Items should fit without any issues in the active vehicle</p>
                 </div>
               </div>
-              <div className={styles.fitState}>
-                <span className={styles.fitDot} style={{ background: '#e6a817' }} />
+              <div className={styles.gfcFitItem}>
+                <span className={styles.gfcFitDot} style={{ background: '#e6a817' }} />
                 <div>
-                  <p className={styles.fitStateTitle}>Tight Fit</p>
-                  <p className={styles.fitStateDesc}>Total volume & dimensions of existing Gigs and/or available Gig may be over threshold of what vehicle can typically handle</p>
+                  <p className={styles.gfcFitTitle}>Tight Fit</p>
+                  <p className={styles.gfcFitDesc}>Total volume & dimensions of existing Gigs and/or available Gig may be over threshold of what vehicle can typically handle</p>
                 </div>
               </div>
-              <div className={styles.fitState}>
-                <span className={styles.fitDot} style={{ background: '#c0392b' }} />
+              <div className={styles.gfcFitItem}>
+                <span className={styles.gfcFitDot} style={{ background: '#c0392b' }} />
                 <div>
-                  <p className={styles.fitStateTitle}>Not a Fit (Active Route)</p>
-                  <p className={styles.fitStateDesc}>Total volume & dimensions of existing Gigs and available Gig is way above threshold of what vehicle can handle.</p>
+                  <p className={styles.gfcFitTitle}>Not a Fit (Active Route)</p>
+                  <p className={styles.gfcFitDesc}>Total volume & dimensions of existing Gigs and available Gig is way above threshold of what vehicle can handle.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className={styles.phaseImage}>[Insert: Phase 3 screens]</div>
+          <div className={styles.gfcPhaseVisual}>
+            <PhaseScreens screens={phase3Screens} />
+            <div className={styles.gfcMetric}>
+              <p className={styles.gfcMetricValue}>[Metric 1]</p>
+              <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
+            </div>
+          </div>
         </div>
       </section>
 

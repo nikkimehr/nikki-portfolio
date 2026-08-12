@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
@@ -193,7 +194,7 @@ export default function FindMeGigs() {
 
           <div className={styles.toggleEvolution}>
             <div className={styles.toggleIter}>
-              <div className={styles.toggleIterImage}>[Insert: Iteration 1 — Pill with icon + descriptive text "Searching for nearby gigs..."]</div>
+              <Image src="/images/find-me-gigs/toggle-iteration-1.png" alt="Iteration 1 — pill with icon and descriptive text 'Searching for nearby gigs...'" width={400} height={300} unoptimized className={styles.toggleIterImage} />
               <div className={styles.toggleIterMeta}>
                 <p className={styles.toggleIterLabel}>Iteration 1: Context-heavy</p>
                 <p className={styles.toggleIterPro}>Clear intent; explains what's happening</p>
@@ -202,7 +203,7 @@ export default function FindMeGigs() {
             </div>
             <div className={styles.toggleIterArrow}>↓</div>
             <div className={styles.toggleIter}>
-              <div className={styles.toggleIterImage}>[Insert: Iteration 2 — Pill with icon + action button "GO"]</div>
+              <Image src="/images/find-me-gigs/toggle-iteration-2.png" alt="Iteration 2 — pill with icon and action button 'GO'" width={400} height={300} unoptimized className={styles.toggleIterImage} />
               <div className={styles.toggleIterMeta}>
                 <p className={styles.toggleIterLabel}>Iteration 2: Action-oriented</p>
                 <p className={styles.toggleIterPro}>Emphasizes driver agency with explicit call-to-action</p>
@@ -211,7 +212,7 @@ export default function FindMeGigs() {
             </div>
             <div className={styles.toggleIterArrow}>↓</div>
             <div className={`${styles.toggleIter} ${styles.toggleIterFinal}`}>
-              <div className={styles.toggleIterImage}>[Insert: Final — Simple toggle with status label "Looking for Gigs" / "Recommend Gigs"]</div>
+              <Image src="/images/find-me-gigs/toggle-final.png" alt="Final — simple toggle with status label 'Looking for Gigs' / 'Recommend Gigs'" width={400} height={300} unoptimized className={styles.toggleIterImage} />
               <div className={styles.toggleIterMeta}>
                 <p className={styles.toggleIterLabelFinal}>Final: Familiar toggle pattern</p>
                 <p className={styles.toggleIterPro}>Recognizable mental model; clear on/off states; minimal distraction on active route</p>
@@ -234,7 +235,7 @@ export default function FindMeGigs() {
               <p className={styles.offerFlowLargeTitle}>Feature education</p>
               <p className={styles.offerFlowLargeDesc}>Before drivers receive their first offer, they're introduced to the feature through an in-app education moment. This sets expectations on what Find Me Gigs is, how the toggle works, and what to expect when an offer arrives.</p>
             </div>
-            <div className={styles.gifPlaceholder}>[Insert: feature education GIF or screen]</div>
+            <Image src="/images/find-me-gigs/feature-education.gif" alt="Feature education screen" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
           </div>
 
           {/* Gig offer card — research integrated */}
@@ -243,33 +244,52 @@ export default function FindMeGigs() {
               <p className={styles.offerFlowLargeTitle}>Gig offer card and route integration</p>
               <p className={styles.offerFlowLargeDesc}>In-app notification surfaces pay, mileage, pickup location, gig size, and item dimensions in ranked order from research. When accepted, the pickup appears on the map in context of the current route. Drivers see the relationship to where they are before committing.</p>
             </div>
-            <div className={styles.gifPlaceholder}>[Insert: offer card GIF showing card appearance, details, and map integration after accept]</div>
+            <Image src="/images/find-me-gigs/offer-card.gif" alt="Offer card appearance, details, and map integration after accept" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
             <div className={styles.abResearch}>
               <p className={styles.abResearchLabel}>HOW RESEARCH SHAPED THIS</p>
               <p className={styles.abResearchSub}>An A/B test settled the information hierarchy.</p>
+
+              <p className={styles.abTestColHeading}>Why we tested this</p>
+              <div className={styles.abTestWhyList}>
+                <p className={styles.abTestWhyItem}>Pay ranked highest in what drivers said they needed, but it wasn't what drove their decisions in testing.</p>
+                <p className={styles.abTestWhyItem}>Needed to know whether route complexity or pay should lead the information hierarchy on the offer card.</p>
+                <p className={styles.abTestWhyItem}>The 60-second decision window meant only one signal could lead; the card couldn't hedge.</p>
+              </div>
+
+              <p className={styles.abTestColHeading} style={{ marginTop: '1.5rem' }}>Validated outcomes</p>
+              <p className={styles.abTestValidatedIntro}>Tested head-to-head, the stop-count version won decisively:</p>
               <div className={styles.abGrid}>
-                <div className={styles.abCard}>
-                  <p className={styles.abLabelWinner}>Winner; 69% selected</p>
-                  <div className={styles.abScreen}></div>
+                <div className={`${styles.abCard} ${styles.abCardWinner}`}>
+                  <span className={styles.abLabelWinner}>✓ Winner — 69% selected</span>
+                  <Image src="/images/find-me-gigs/ab-winner.png" alt="Winning card design — stop count alongside time and mileage" width={600} height={300} unoptimized className={styles.abScreen} />
                   <p className={styles.abResultWin}>Stop count alongside time + mileage</p>
+                  <div className={styles.abCardStats}>
+                    <div>
+                      <p className={styles.abCardStatNum}>4.42/5</p>
+                      <p className={styles.abCardStatLabel}>ease of accepting</p>
+                    </div>
+                    <div>
+                      <p className={styles.abCardStatNum}>4.51/5</p>
+                      <p className={styles.abCardStatLabel}>likelihood to use on a route</p>
+                    </div>
+                    <div>
+                      <p className={styles.abCardStatNum}>66%</p>
+                      <p className={styles.abCardStatLabel}>rated accepting "very easy"</p>
+                    </div>
+                    <div>
+                      <p className={styles.abCardStatNum}>70%</p>
+                      <p className={styles.abCardStatLabel}>would "always" use it on a route</p>
+                    </div>
+                  </div>
                 </div>
                 <div className={styles.abCard}>
-                  <p className={styles.abLabelLoser}>31% selected</p>
-                  <div className={styles.abScreen}></div>
+                  <span className={styles.abLabelLoser}>31% selected</span>
+                  <Image src="/images/find-me-gigs/ab-loser.png" alt="Losing card design — pay-first, no route complexity signal" width={600} height={300} unoptimized className={styles.abScreen} />
                   <p className={styles.abResultLose}>Pay-first, no route complexity signal</p>
                 </div>
               </div>
-              <p className={styles.bodyText}>Drivers needed route complexity, how much their plan changes, not just pay. Stop count gave them that in a single glance.</p>
-              <div className={styles.metricsRow} style={{ gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '360px' }}>
-                <div className={styles.metricSmall}>
-                  <p className={styles.metricSmallNum}>4.42/5</p>
-                  <p className={styles.metricSmallLabel}>ease of accepting</p>
-                </div>
-                <div className={styles.metricSmall}>
-                  <p className={styles.metricSmallNum}>4.51/5</p>
-                  <p className={styles.metricSmallLabel}>likelihood to use on a route</p>
-                </div>
-              </div>
+
+              <p className={styles.bodyText} style={{ marginTop: '1.5rem' }}>Drivers needed route complexity, how much their plan changes, not just pay. Stop count gave them that in a single glance.</p>
             </div>
           </div>
 
@@ -279,7 +299,7 @@ export default function FindMeGigs() {
               <p className={styles.offerFlowLargeTitle}>Decision interactions</p>
               <p className={styles.offerFlowLargeDesc}>Drivers can accept, decline, or let the 60-second window expire. Each action maps to a clear outcome on their route. The countdown is visible but not aggressive; drivers on an active delivery can dismiss and stay focused.</p>
             </div>
-            <div className={styles.gifPlaceholder}>[Insert: GIF showing accept, decline, and timeout interactions with countdown timer]</div>
+            <Image src="/images/find-me-gigs/decision-interactions.gif" alt="Accept, decline, and timeout interactions with countdown timer" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
           </div>
         </div>
 
@@ -296,7 +316,7 @@ export default function FindMeGigs() {
             <p className={styles.offerFlowLargeTitle}>Capturing rejection reasons in the moment</p>
             <p className={styles.offerFlowLargeDesc}>Rather than wait for the next research cycle, we added an in-app prompt after a driver declines an Add-On, capturing why in the moment. It gave us an ongoing read on rejection reasons instead of relying on periodic surveys alone.</p>
           </div>
-          <div className={styles.gifPlaceholder}>[Insert: screen showing in-app feedback prompt after declining an Add-On]</div>
+          <Image src="/images/find-me-gigs/rejection-prompt.png" alt="In-app feedback prompt after declining an Add-On" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
         </div>
 
         <p className={styles.bodyText}>The rest of the survey findings, more time to review offers, clearer item dimensions, notifications that work with navigation apps, became input for the roadmap, covered in What's Next.</p>
@@ -305,33 +325,51 @@ export default function FindMeGigs() {
       {/* IMPACT */}
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>IMPACT</p>
-        <div className={styles.impactGrid}>
-          <div className={styles.impactCard}>
-            <p className={styles.impactNum}>58%</p>
-            <p className={styles.impactLabel}>overall acceptance rate on POTO (push-offer-to-offer) notifications</p>
-            <p className={styles.impactDesc}>post-release survey, n=149</p>
+        <p className={styles.secHeading}>Testing validated the shift from map-hunting to proactive matching.</p>
+        <p className={styles.impactIntro}>The original goals were to get drivers off the map while driving, close the pricing gap on gigs with no visible nearby driver, and make picking up additional work effortless. Post-release survey (n=149) and behavioral data confirmed the approach.</p>
+
+        <div className={styles.impactCols}>
+          <div>
+            <p className={styles.impactColHeading}>Why it mattered</p>
+            <div className={styles.impactPredictedList}>
+              <p className={styles.impactPredictedItem}>📈 Fewer manual map checks → Safer behavior on active routes</p>
+              <p className={styles.impactPredictedItem}>📈 Proactive matching → Gigs priced accurately instead of assuming no nearby driver</p>
+              <p className={styles.impactPredictedItem}>📈 Faster pickup decisions → Higher throughput per driver shift</p>
+            </div>
           </div>
-          <div className={styles.impactCard}>
-            <p className={styles.impactNum}>4.42/5</p>
-            <p className={styles.impactLabel}>ease-of-use rating from A/B testing cohort</p>
-            <p className={styles.impactDesc}>on accepting gigs in under 60 seconds</p>
-          </div>
-          <div className={styles.impactCard}>
-            <p className={styles.impactNum}>$1.03</p>
-            <p className={styles.impactLabel}>saved per gig vs. standard map-published pricing</p>
-            <p className={styles.impactDesc}>POTO savings, market level L28</p>
+
+          <div>
+            <p className={styles.impactColHeading}>Validated outcomes</p>
+            <p className={styles.impactValidatedIntro}>Compared with the prior map-hunting experience, drivers showed:</p>
+
+            <div className={styles.impactStatCard}>
+              <p className={styles.impactStatNum}>58%</p>
+              <p className={styles.impactStatTitle}>Overall acceptance rate on POTO notifications</p>
+              <p className={styles.impactStatDesc}>Drivers accepted more than half of proactively surfaced offers without manually searching the map.</p>
+            </div>
+            <div className={styles.impactStatCard}>
+              <p className={styles.impactStatNum}>4.42/5</p>
+              <p className={styles.impactStatTitle}>Ease-of-use rating from the A/B testing cohort</p>
+              <p className={styles.impactStatDesc}>Measured on accepting gigs in under 60 seconds.</p>
+            </div>
+            <div className={styles.impactStatCard}>
+              <p className={styles.impactStatNum}>$1.03</p>
+              <p className={styles.impactStatTitle}>Saved per gig vs. standard map-published pricing</p>
+              <p className={styles.impactStatDesc}>POTO savings, market level L28.</p>
+            </div>
           </div>
         </div>
-        <p className={styles.bodyText} style={{ marginTop: '1.5rem' }}>Timeout remains the biggest opportunity. Drivers aren't rejecting; they're missing offers mid-delivery. This signals that smarter notification timing, not information design, is the next problem to solve.</p>
+
+        <p className={styles.bodyText} style={{ marginTop: '2rem' }}>Timeout remains the biggest opportunity. Drivers aren't rejecting; they're missing offers mid-delivery. This signals that smarter notification timing, not information design, is the next problem to solve.</p>
         <div className={styles.chartBlock}>
           <p className={styles.chartTitle}>POTO response rate: accepted vs. rejected vs. timeout (Nov 2025–Apr 2026)</p>
           <p className={styles.chartCap}>Timeout (58.8%) remains the biggest opportunity for improvement in driver engagement.</p>
-          <div className={styles.chartImg}></div>
+          <Image src="/images/find-me-gigs/poto-response-chart.png" alt="POTO response rate: accepted vs rejected vs timeout" width={800} height={300} unoptimized className={styles.chartImg} />
         </div>
         <div className={styles.chartBlock}>
           <p className={styles.chartTitle}>Driver opt-in rate by hour; Mar 2026</p>
           <p className={styles.chartCap}>5,000 to 7,000 drivers actively requesting add-ons per peak hour vs. under 1,000 opting out.</p>
-          <div className={styles.chartImg}></div>
+          <Image src="/images/find-me-gigs/opt-in-rate-chart.png" alt="Driver opt-in rate by hour" width={800} height={300} unoptimized className={styles.chartImg} />
         </div>
       </section>
 
