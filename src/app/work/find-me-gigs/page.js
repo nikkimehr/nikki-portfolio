@@ -244,24 +244,17 @@ export default function FindMeGigs() {
               <p className={styles.offerFlowLargeDesc}>In-app notification surfaces pay, mileage, pickup location, gig size, and item dimensions in ranked order from research. When accepted, the pickup appears on the map in context of the current route. Drivers see the relationship to where they are before committing.</p>
             </div>
             <Image src="/images/find-me-gigs/offer-card.gif" alt="Offer card appearance, details, and map integration after accept" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
+            
             <div className={styles.abResearch}>
-              <p className={styles.abResearchLabel}>HOW RESEARCH SHAPED THIS</p>
-              <p className={styles.abResearchSub}>An A/B test settled the information hierarchy.</p>
-
-              <p className={styles.abTestColHeading}>Why we tested this</p>
+              <p className={styles.abResearchLabel}>HOW RESEARCH SHAPED FINAL DESIGNS</p>
               <div className={styles.abTestWhyList}>
-                <p className={styles.abTestWhyItem}>Pay ranked highest in what drivers said they needed, but it wasn't what drove their decisions in testing.</p>
-                <p className={styles.abTestWhyItem}>Needed to know whether route complexity or pay should lead the information hierarchy on the offer card.</p>
-                <p className={styles.abTestWhyItem}>The 60-second decision window meant only one signal could lead; the card couldn't hedge.</p>
+                <p className={styles.abTestWhyItem}>There was a lot of data that could have been included on the Gig offer cards. Though we were in a time crunch to ship this feature, I ran an A/B study to identify exactly what would help drivers make informed decisions and accept the feature. </p>
               </div>
-
-              <p className={styles.abTestColHeading} style={{ marginTop: '1.5rem' }}>Validated outcomes</p>
-              <p className={styles.abTestValidatedIntro}>Tested head-to-head, the stop-count version won decisively:</p>
               <div className={styles.abGrid}>
                 <div className={`${styles.abCard} ${styles.abCardWinner}`}>
                   <span className={styles.abLabelWinner}>✓ Winner — 69% selected</span>
                   <Image src="/images/find-me-gigs/ab-winner.png" alt="Winning card design — stop count alongside time and mileage" width={600} height={300} unoptimized className={styles.abScreen} />
-                  <p className={styles.abResultWin}>Stop count alongside time + mileage</p>
+                  <p className={styles.abResultWin}>Drivers needed to see route complexity and impact of the new Gig on their current plans.</p>
                   <div className={styles.abCardStats}>
                     <div>
                       <p className={styles.abCardStatNum}>4.42/5</p>
@@ -284,11 +277,9 @@ export default function FindMeGigs() {
                 <div className={styles.abCard}>
                   <span className={styles.abLabelLoser}>31% selected</span>
                   <Image src="/images/find-me-gigs/ab-loser.png" alt="Losing card design — pay-first, no route complexity signal" width={600} height={300} unoptimized className={styles.abScreen} />
-                  <p className={styles.abResultLose}>Pay-first, no route complexity signal</p>
+                  <p className={styles.abResultLose}>Pay ranked highest in what drivers said they needed, but it wasn't what drove their decisions in testing.</p>
                 </div>
               </div>
-
-              <p className={styles.bodyText} style={{ marginTop: '1.5rem' }}>Drivers needed route complexity, how much their plan changes, not just pay. Stop count gave them that in a single glance.</p>
             </div>
           </div>
 
