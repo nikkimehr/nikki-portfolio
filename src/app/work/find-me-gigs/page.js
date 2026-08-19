@@ -67,8 +67,7 @@ export default function FindMeGigs() {
 
       {/* DESIGN CONTEXT */}
       <section className={styles.sec}>
-        <p className={styles.secEyebrow}>DESIGN CONTEXT</p>
-        <p className={styles.constraintTitle}>Constraint: data science built this before design was involved</p>
+        <p className={styles.secEyebrow}>DESIGN CONSTRAINTS</p>
         <p className={styles.bodyText}>Find Me Gigs was conceived and built by data science before product and design were brought in. Core mechanics were already locked by the time I joined. My role was to make a pre-defined system feel intentional and driver-friendly, not shape what it did.</p>
         <div className={styles.ddList}>
           <div className={styles.ddRow}>

@@ -25,7 +25,7 @@ export default function About() {
             I'm a design generalist with a focus on UX and research, along with a healthy addiction to strategy and systems thinking. I love collaborating with teams to help make people's lives easier through data-driven, thoughtful design.
           </p>
           <p className={styles.bioText}>
-            Outside of work, I'm usually traveling, exploring new hobbies (recently wheel pottery and sewing), and trying to keep my 1,236-day Duolingo streak alive.
+            Outside of work, I enjoy traveling, exploring new hobbies (currently pottery and sewing!), and trying to keep my 1,300-day Duolingo streak alive.
           </p>
           <p>
             If you'd like to say hi, reach out on {' '}

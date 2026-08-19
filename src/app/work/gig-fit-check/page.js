@@ -42,7 +42,7 @@ export default function GigFitCheck() {
       {/* HEADER */}
       <section className={styles.header}>
         <p className={styles.eyebrow}>ROADIE · DRIVER APP</p>
-        <h1 className={styles.title}>Reframing a gig sizing problem into Roadie's first dynamic fit check experience</h1>
+        <h1 className={styles.title}>Reframing a gig sizing problem into Roadie's first dynamic fit experience</h1>
         <div className={styles.metaRow}>
           <div className={styles.metaItem}>
             <p className={styles.metaLabel}>MY ROLE</p>
@@ -76,8 +76,12 @@ export default function GigFitCheck() {
       {/* SUMMARY */}
        <section className={styles.sec}>
         <p className={styles.secEyebrow}>OVERVIEW</p>
-        <p className={styles.bodyText}>Sizing was the #1 driver of support tickets on Roadie. Vague t-shirt size labels left drivers guessing whether a gig would fit their vehicle, leading to failed pickups and cancellations.
-        I led discovery and design for a multi-phased sizing logic system: replacing t-shirt labels with contextual guidance that helps drivers confidently assess fit before accepting a gig. After identifying a critical lack of data integrity, I pitched an incremental roadmap to stakeholders, building the foundation for Roadie's first decision-support experience and cross-functional roadmap work with engineering and data science. The goals for this effort focused on:</p>
+        <p className={styles.bodyText}>Sizing was the #1 driver of support volume for Roadie. Vague t-shirt size labels left drivers guessing whether a gig would fit their vehicle, leading to failed pickups and cancellations.
+        I led discovery and design for a multi-phased sizing logic system: replacing t-shirt labels with contextual guidance that helps drivers confidently assess fit before offering on a gig. </p>
+        
+        <p className={styles.bodyText}>A critical precursor to this initiative was a project I previously shipped to collect driver VINs and proof of insurance. By verifying the exact vehicles in use on the platform, we established the necessary data foundation to move away from the previous T-shirt sizes. This groundwork allowed us to use a driver's verified vehicle data as the baseline for assessing capacity within the Fit Check logic.</p>
+        
+       <p className={styles.bodyText}> The goals for this effort focused on:</p>
         <div className={styles.goalsList}>
           <div className={styles.goalItem}>
             <span className={styles.goalNum}>01</span>
@@ -95,46 +99,13 @@ export default function GigFitCheck() {
       </section>
       
 
-
-      {/* OUTCOME */}
-      <section className={styles.sec}>
-        <p className={styles.secEyebrow}>OUTCOME</p>
-        <p className={styles.secHeading}>Gig Fit Check</p>
-        <p className={styles.bodyText}>Determining fit based on vehicle volume, available capacity and item volume. Dynamic and streamlined approach to decisively communicate to drivers if they're fit to take on a Gig before offering. A critical precursor to this initiative was a project I previously shipped to collect driver VINs and proof of insurance. By verifying the exact vehicles in use on the platform, we established the necessary data foundation to move away from the previous T-shirt sizes. This groundwork allowed us to use a driver's verified vehicle data as the baseline for assessing capacity within the Fit Check logic.</p>
-        <Image src="/images/gig-fit-check/outcome-overview.png" alt="Gig Fit Check overview" width={900} height={500} unoptimized className={styles.imagePlaceholder} />
-      </section>
-
- {/* IMPACT */}
-      <section className={styles.sec}>
-        <p className={styles.secEyebrow}>IMPACT</p>
-        <div className={styles.impactGrid}>
-          <div className={styles.impactCard}>
-            <p className={styles.impactNum}>58%</p>
-            <p className={styles.impactLabel}>overall acceptance rate on POTO (push-offer-to-offer) notifications</p>
-            <p className={styles.impactDesc}>post-release survey, n=149</p>
-          </div>
-          <div className={styles.impactCard}>
-            <p className={styles.impactNum}>4.42/5</p>
-            <p className={styles.impactLabel}>ease-of-use rating from A/B testing cohort</p>
-            <p className={styles.impactDesc}>on accepting gigs in under 60 seconds</p>
-          </div>
-          <div className={styles.impactCard}>
-            <p className={styles.impactNum}>$1.03</p>
-            <p className={styles.impactLabel}>saved per gig vs. standard map-published pricing</p>
-            <p className={styles.impactDesc}>POTO savings, market level L28</p>
-          </div>
-        </div>
-      </section>
-
       {/* DISCOVERY FINDINGS */}
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>DISCOVERY FINDINGS</p>
         <div className={styles.findingsGrid}>
-          <div className={styles.findingCard}>
+          <div className={styles.abCard}>
             <div className={styles.findingIcon}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
+               <Image src="/images/gig-fit-check/vehicle.png" width={48} height={48} unoptimized />
             </div>
             <p className={styles.findingTitle}>Vehicle Correlation</p>
             <ul className={styles.findingList}>
@@ -143,11 +114,9 @@ export default function GigFitCheck() {
               <li>Opportunity: Could vehicle size be the primary indicator for gig eligibility and consolidation?</li>
             </ul>
           </div>
-          <div className={styles.findingCard}>
+          <div className={styles.abCard}>
             <div className={styles.findingIcon}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
-              </svg>
+              <Image src="/images/gig-fit-check/dim.png" width={48} height={48} unoptimized />
             </div>
             <p className={styles.findingTitle}>Dimensions vs. Weight</p>
             <ul className={styles.findingList}>
@@ -156,11 +125,9 @@ export default function GigFitCheck() {
               <li>Separating these indicators helps drivers prepare for the physical reality of the job.</li>
             </ul>
           </div>
-          <div className={styles.findingCard}>
+          <div className={styles.abCard}>
             <div className={styles.findingIcon}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-              </svg>
+              <Image src="/images/gig-fit-check/disc.png" width={48} height={48} unoptimized />
             </div>
             <p className={styles.findingTitle}>The Logic Gap</p>
             <p className={styles.findingBody}>The system lacked "Consolidation Logic."</p>
@@ -181,12 +148,10 @@ export default function GigFitCheck() {
         <p className={styles.secEyebrow}>INITIAL EXPLORATIONS</p>
         <div className={styles.explorationRow}>
           <div className={styles.explorationItem}>
-            <p className={styles.explorationTitle}>Vehicle Size Requirement</p>
-            <Image src="/images/gig-fit-check/exploration-vehicle-size.png" alt="Vehicle size requirement exploration screens" width={500} height={700} unoptimized className={styles.explorationImage} />
+            <Image src="/images/gig-fit-check/iteration 1.png" alt="Vehicle size requirement exploration screens" width={400} height={700} unoptimized className={styles.explorationImage} />
           </div>
           <div className={styles.explorationItem}>
-            <p className={styles.explorationTitle}>Volume Tags & Gig Filters</p>
-            <Image src="/images/gig-fit-check/exploration-volume-tags.png" alt="Volume tags and gig filters exploration screens" width={500} height={700} unoptimized className={styles.explorationImage} />
+            <Image src="/images/gig-fit-check/iteration 2.png" alt="Volume tags and gig filters exploration screens" width={400} height={700} unoptimized className={styles.explorationImage} />
           </div>
         </div>
       </section>
@@ -258,7 +223,7 @@ export default function GigFitCheck() {
           <div>
             <span className={styles.gfcPill}>PHASE 3</span>
             <p className={styles.gfcTitle}>Gig Fit Check</p>
-            <p className={styles.gfcBody}>Launch the final automated logic that decisively communicate to drivers if they're fit to take on a Gig before offering.</p>
+            <p className={styles.gfcBody}>Determining fit based on vehicle volume, available capacity and item volume. Dynamic and streamlined approach to decisively communicate to drivers if they're fit to take on a Gig before offering. </p>
 
             <div className={styles.gfcFitList}>
               <div className={styles.gfcFitItem}>
@@ -295,7 +260,7 @@ export default function GigFitCheck() {
       </section>
 
       {/* STRATEGIC TAKEAWAY */}
-      <div className={styles.darkSection}>
+      <div className={styles.darkSection} style={{ marginTop: '4rem' }}>
         <p className={styles.darkSectionEyebrow}>STRATEGIC TAKEAWAY</p>
         <p className={styles.darkSectionBody}>Advocating for this incremental approach was the turning point for the project. By shifting from a single launch to a phased rollout, we secured stakeholder buy-in and gave engineering the necessary runway to build the technical core for Fit Check. This was also a major UX win for two reasons:</p>
         <div className={styles.darkSectionGrid}>
@@ -310,10 +275,11 @@ export default function GigFitCheck() {
         </div>
       </div>
 
-      {/* DRIVER FEEDBACK */}
-      <section className={styles.sec}>
-        <p className={styles.secEyebrow}>DRIVER FEEDBACK</p>
 
+ <section className={styles.sec}>
+        <p className={styles.secEyebrow}>LAUNCH FEEDACK</p>
+        <p className={styles.bodyText}>Fit Check wasn&apos;t universally well received at launch. Drivers pushed back hard, so I continued researching and gathering feedback to shape what&apos;s being built next.</p>
+        
         <div className={styles.feedbackCollage}>
           <div className={styles.feedbackCard} style={{ top: 20, left: 30, transform: 'rotate(-3deg)' }}>
             <p className={styles.feedbackSource}>r/Roadie</p>
@@ -349,8 +315,6 @@ export default function GigFitCheck() {
           </div>
         </div>
 
-        <p className={styles.secHeading} style={{ marginTop: '2rem' }}>Iterating on feedback</p>
-        <p className={styles.bodyText}>Fit Check wasn&apos;t universally well received at launch. Drivers pushed back hard, so I continued researching and gathering feedback to shape what&apos;s being built next.</p>
 
         <div className={styles.roadmapHeader}>
           <p className={styles.roadmapHeaderLabel}>What drivers said</p>
@@ -376,7 +340,9 @@ export default function GigFitCheck() {
           </div>
         </div>
 
-        <p className={styles.bodyText} style={{ marginTop: '1rem' }}>Of 719 fit-related comments across 696 gigs in a two-week window, the throughline wasn&apos;t &ldquo;remove this feature,&rdquo; it was &ldquo;make it more accurate.&rdquo; That distinction is steering the next phase of work.</p>
+        <p className={styles.bodyText} style={{ marginTop: '1.5rem' }}>Of 719 fit-related comments across 696 gigs in a two-week window, the ask from drivers wasn&apos;t &ldquo;remove this feature,&rdquo; it was &ldquo;make it more accurate.&rdquo; That is currently steering the next phase of work, leading with improved logic and vehicle mapping on the backend side.</p>
+
+        <p className={styles.bodyText} style={{ marginTop: '2rem' }}>Much more to come on this project!</p>
       </section>
 
       {/* NEXT PROJECT */}

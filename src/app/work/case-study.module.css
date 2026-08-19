@@ -81,7 +81,7 @@
 }
 
 /* SECTIONS */
-.sec { padding: 32px 80px; }
+.sec { padding: 40px 80px; }
 .secEyebrow {
   font-size: 11px;
   font-weight: 600;
@@ -108,8 +108,8 @@
 .darkBlock {
   background: #0d1b2a;
   border-radius: var(--radius-md);
-  padding: 36px 48px;
-  margin: 1.5rem 0;
+  padding: 48px 48px;
+  margin: 1rem 0;
 }
 .darkBlockText {
   font-size: 20px;
@@ -175,7 +175,7 @@
   gap: 12px;
 }
 .impactCard {
-  background: var(--surface-card);
+  background: var(--surface-accent);
   border-radius: var(--radius-md);
   padding: 22px;
 }
@@ -306,8 +306,8 @@
 .quoteStack {
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  margin-top: 20px;
+  gap: 60px;
+  margin-top: 48px;
 }
 .quote {
   font-size: 16px;
@@ -511,7 +511,7 @@
   .heroImage { width: calc(100% - 80px); margin: 28px 40px 0; }
   .header { margin: 28px 40px 0; }
   .summary { padding: 28px 40px; }
-  .sec { padding: 32px 40px; }
+  .sec { padding: 24px 40px; }
   .darkSection { margin: 0 40px; }
   .nextProject { padding: 28px 40px; }
   .cardGrid3 { grid-template-columns: 1fr 1fr; }
@@ -798,9 +798,9 @@
 .findingTitle { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
 .findingBody { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; line-height: 1.6; }
 .findingList { font-size: 12px; line-height: 1.7; color: var(--text-secondary); margin-left: 14px; display: flex; flex-direction: column; gap: 5px; }
-.explorationRow { display: flex; flex-direction: column; gap: 28px; }
-.explorationTitle { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
-.explorationImage { width: 100%; aspect-ratio: 16/9; background: var(--surface-placeholder); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-tertiary); background-image: repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255,255,255,0.55) 12px, rgba(255,255,255,0.55) 13px); }
+.explorationRow { display: flex; flex-direction: column; gap: 60px; }
+.explorationTitle { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+.explorationImage { width: 100%; height: auto; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; }
 .fitStates { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
 .fitState { display: flex; gap: 12px; align-items: flex-start; }
 .fitDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
@@ -814,7 +814,7 @@
 .feedbackCollage {
   background: var(--surface-card);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: 48px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -832,9 +832,9 @@
 
 .feedbackSource { font-size: 10px; color: var(--text-secondary); margin-bottom: 4px; }
 .feedbackQuote { font-size: 11px; line-height: 1.4; color: var(--navy); }
-.roadmapHeader { display: grid; grid-template-columns: 1fr 32px 1fr; margin-top: 1.5rem; margin-bottom: 8px; }
+.roadmapHeader { display: grid; grid-template-columns: 1fr 32px 1fr; margin-top: 4.5rem; margin-bottom: 16px; }
 .roadmapHeaderLabel { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue-primary); }
-.roadmapList { display: flex; flex-direction: column; gap: 14px; }
+.roadmapList { display: flex; flex-direction: column; gap: 24px; }
 .roadmapRow { display: grid; grid-template-columns: 1fr 32px 1fr; align-items: center; }
 .roadmapSaid { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; font-size: 12px; line-height: 1.6; color: var(--navy); }
 .roadmapArrow { text-align: center; font-size: 18px; color: var(--blue-primary); }

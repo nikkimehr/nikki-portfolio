@@ -7,7 +7,7 @@ const projects = [
   {
     slug: 'gig-fit-check',
     company: 'Roadie',
-    title: "Reframing a sizing problem into Roadie's first dynamic logic system",
+    title: "Reframing a gig sizing problem into Roadie's first dynamic fit experience",
     tags: ['0–1', 'Mobile'],
   },
    {
