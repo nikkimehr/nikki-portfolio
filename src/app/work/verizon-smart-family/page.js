@@ -21,7 +21,9 @@ export default function VerizonSmartFamily() {
         Back to work
       </Link>
 
-      <div className={styles.heroImage} />
+      <div className={styles.heroImage} >
+      <img src="/images/vsf/verizon-smart-family-card.png" alt="Verizon Smart Family Locations" />        
+      </div>
 
       {/* HEADER */}
       <section className={styles.header}>

@@ -21,14 +21,17 @@
 /* HERO IMAGE */
 .heroImage {
   width: calc(100% - 160px);
-  aspect-ratio: 16/7;
-  background: var(--surface-placeholder);
-  border-radius: var(--radius-lg);
+  aspect-ratio: 16/9;
   margin: 28px 80px 0;
-  background-image: repeating-linear-gradient(
-    -45deg, transparent, transparent 12px,
-    rgba(255,255,255,0.5) 12px, rgba(255,255,255,0.5) 13px
-  );
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* DARK HEADER BLOCK */
@@ -821,7 +824,7 @@
 .insightImage { margin: 1.5rem 0; border-radius: var(--radius-md); overflow: hidden; max-width: 600px; }
 
 /* ============================================
-   GIG FIT CHECK — unique
+   GIG FIT CHECK 
    ============================================ */
 .goalsList { display: flex; flex-direction: column; gap: 14px; }
 .goalItem { display: flex; align-items: baseline; gap: 14px; }

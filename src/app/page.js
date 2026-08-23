@@ -9,36 +9,42 @@ const projects = [
     company: 'Roadie',
     title: "Reframing a gig sizing problem into Roadie's first dynamic fit experience",
     tags: ['0–1', 'Mobile'],
+    cardSrc: '/images/gig-fit-check/gig-fit-check-card.png',
   },
    {
     slug: 'find-me-gigs',
     company: 'Roadie',
     title: 'Gig-matching system that notifies drivers of compatible deliveries',
     tags: ['0–1', 'Mobile'],
+    cardSrc: '/images/find-me-gigs/find-me-gigs-card.png',
   },
   {
     slug: 'vehicle-data-collection',
     company: 'Roadie',
     title: 'Multi-phase effort to collect & build vehicle data foundation',
     tags: ['Mobile', 'Web'],
+    cardSrc: '/images/vehicle-data-collection/vehicle-data-collection-card.png',
   },
   {
     slug: 'verizon-smart-family',
     company: 'Publicis Sapient | Verizon Smart Family',
     title: 'Elevating a premium offering into a complete family location experience',
     tags: ['Client Work', 'Mobile'],
+    cardSrc: '/images/vsf/verizon-smart-family-card.png',
   },
   {
     slug: 'verizon-cloud-offboarding',
     company: 'Publicis Sapient | Verizon Cloud',
     title: 'Turning a destructive action into an informed offboarding experience',
     tags: ['Client Work', 'Mobile', 'Web'],
+    cardSrc: '/images/vco/verizon-cloud-offboarding-card.png',
   },
   {
     slug: 'verizon-smart-family-onboarding',
     company: 'Publicis Sapient | Verizon Smart Family',
     title: "Building trust into Smart Family's onboarding experience",
     tags: ['Client Work', 'Mobile'],
+    cardSrc: '/images/vsf-onboarding/verizon-smart-family-onboarding-card.png',
   },
 ]
 
@@ -66,7 +72,9 @@ export default function Home() {
         <div className={styles.cardsGrid}>
           {gridProjects.map(project => (
             <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
-              <div className={styles.cardImageSmall} />
+              <div className={styles.cardImageSmall}>
+                <img src={project.cardSrc} alt={project.title} />
+              </div>
               <div className={styles.cardContent}>
                 <p className={styles.cardCompany}>{project.company}</p>
                 <h2 className={styles.cardTitleSmall}>{project.title}</h2>

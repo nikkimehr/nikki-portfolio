@@ -20,7 +20,10 @@ export default function VerizonCloudOffboarding() {
         Back to work
       </Link>
 
-      <div className={styles.heroImage} />
+    
+      <div className={styles.heroImage} >
+      <img src="/images/vco/verizon-cloud-offboarding-card.png" alt="Verizon Cloud Offboarding" />        
+      </div>
 
       <section className={styles.header}>
         <p className={styles.eyebrow}>PUBLICIS SAPIENT · VERIZON CLOUD</p>
