@@ -208,7 +208,8 @@
 .impactPredictedList { display: flex; flex-direction: column; gap: 12px; }
 .impactPredictedItem { font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
 .impactValidatedIntro { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px; }
-.impactStatCard { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 16px; }
+.impactStatGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+.impactStatCard { background: #f4f7fb; border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 0; height: 220px; display: flex; flex-direction: column; justify-content: center; }
 .impactStatCard:last-child { margin-bottom: 0; }
 .impactStatNum { font-size: 30px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
 .impactStatTitle { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
@@ -216,6 +217,8 @@
 
 @media (max-width: 768px) {
   .impactCols { grid-template-columns: 1fr; gap: 28px; }
+  .impactStatGrid { grid-template-columns: 1fr; }
+  .impactStatCard { height: auto; }
 }
 
 /* GENERIC CARD (findings, principles, learnings, outcomes) */

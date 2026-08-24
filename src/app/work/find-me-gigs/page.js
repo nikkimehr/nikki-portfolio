@@ -68,8 +68,7 @@ export default function FindMeGigs() {
 
       {/* DESIGN CONTEXT */}
       <section className={styles.sec}>
-        <p className={styles.secEyebrow}>DESIGN CONSTRAINTS</p>
-        <p className={styles.bodyText}>Find Me Gigs was conceived and built by data science before product and design were brought in. Core mechanics were already locked by the time I joined. My role was to make a pre-defined system feel intentional and driver-friendly, not shape what it did.</p>
+        <p className={styles.secEyebrow}>TECH-LED CONSTRAINTS</p>
         <div className={styles.ddList}>
           <div className={styles.ddRow}>
             <span className={styles.goalNum}>01</span>
@@ -97,25 +96,18 @@ export default function FindMeGigs() {
 
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>DISCOVERY</p>
-        <p className={styles.bodyText}>Before launch, a usability test (297 responses, drivers with 20+ gigs in the past 30 days) measured comprehension and reaction to the concept alongside the decision factors drivers weigh when offering on a gig.</p>
+        <p className={styles.bodyText}>Before launch, I conducted driver research to measure comprehension and reaction to the feature. This research effort identified key areas we needed to focus on to ensure a smooth transition when introducing such a drastic change to what drivers had been accustomed to for so long. One of the biggest focus points was factors drivers weigh when offering on a gig.</p>
         <div className={styles.insightImage}>
-          <img src="/images/decision-factors.png" alt="Top decision factors: Pay 89%, Mileage/distance 81%, Location on map 67%, Gig size 60%, Item dimensions 53%, Number of stops 42%, Number of items 36%" style={{ width: '100%', borderRadius: '10px' }} />
+          <img src="/images/decision-factors.png" alt="Top decision factors" style={{ width: '100%', borderRadius: '10px' }} />
         </div>
-        <p className={styles.bodyText}>84% rated the acceptance flow easy or very easy, and nearly every participant understood what Add-Ons were without explanation. The open question was what belonged on the offer card itself.</p>
-        <div className={styles.quoteRow}>
-          <div className={styles.ddQuote}>"It will provide an opportunity to automatically recommend an additional offer along my current route; having me check the screen less while driving."</div>
-          <div className={styles.ddQuote}>"It's easier because it's almost like you're being selected instead of having to wait for them to accept you."</div>
+        <div className={styles.darkBlock}>
+          <p className={styles.darkBlockText}>Pay ranked highest in what drivers said they needed, but it wasn't what drove their decisions. When A/B testing gig offer cards, drivers chose the card that focused on route complexity, stop count alongside time and mileage, over the one that led with pay.</p>
         </div>
+        <p className={styles.bodyText} style={{ marginTop: '1rem' }}>That gap between stated preference and tested behavior became the north star for the core decisions for the MVP of this feature - <b>focusing on what changes to the driver's plan, not just what they'll earn.</b>
+        </p>
       </section>
 
-      {/* KEY INSIGHT */}
-      <section className={styles.sec}>
-        <p className={styles.secEyebrow}>KEY INSIGHT</p>
-        <div className={styles.darkBlock}>
-          <p className={styles.darkBlockText}>Pay ranked highest in what drivers said they needed, but it wasn't what drove their decisions. When tested head-to-head, drivers chose the card that showed route complexity, stop count alongside time and mileage, over the one that led with pay.</p>
-        </div>
-        <p className={styles.bodyText} style={{ marginTop: '1rem' }}>That gap between stated preference and tested behavior became the north star for every decision below: show what changes to the driver's plan, not just what they'll earn.</p>
-      </section>
+        
 
       {/* KEY DESIGN DECISIONS */}
       <section className={styles.sec}>
@@ -130,19 +122,21 @@ export default function FindMeGigs() {
             </div>
             <div className={styles.ddContent}>
               <p className={styles.ddTitle}>Show incremental time and mileage, not total route</p>
-              <p className={styles.ddBody}>Drivers care about what changes to their current plan, not the full picture. Reduced cognitive load mid-delivery.</p>
+              <p className={styles.ddBody}>Drivers care about what changes to their current plan, not the full picture. We needed to cognitive load mid-delivery.</p>
+               <p className={styles.ddQuote}>"I need to know what this is going to change, I'm already delivering 20+ packages on a full route."</p>
+
             </div>
           </div>
           <div className={styles.ddRow}>
-            <div className={styles.ddIcon}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+        <div className={styles.ddIcon}>
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.2"/>
               </svg>
             </div>
             <div className={styles.ddContent}>
               <p className={styles.ddTitle}>Surface stop count as the primary hierarchy signal</p>
               <p className={styles.ddBody}>Drivers already have map context. Stop count told them exactly how much more complex their route would become before they committed.</p>
-              <p className={styles.ddQuote}>"Knowing how many stops helps, and how long to accept. The other option didn't clearly show stops."</p>
+              <p className={styles.ddQuote}>"Knowing how many stops helps me plan the rest of my day and other jobs."</p>
             </div>
           </div>
           <div className={styles.ddRow}>
@@ -153,22 +147,12 @@ export default function FindMeGigs() {
             </div>
             <div className={styles.ddContent}>
               <p className={styles.ddTitle}>60-second window forced ruthless prioritization</p>
-              <p className={styles.ddBody}>A constraint we didn't set became a design forcing function. Every element had to earn its place; extra detail was cut, essential signals elevated.</p>
-              <p className={styles.ddQuote}>"Should be a bit easier to read; maybe add a speak button to read text aloud while navigating."</p>
+              <p className={styles.ddBody}>A constraint we didn't set became a design forcing function. Every element had to earn its place to ensure the time allowed sufficient time to make a decision.</p>
+              <p className={styles.ddQuote}>"While on time-sensitive gigs" and "actively driving between traffic lights" were the top scenarios where drivers couldn't act on offers in given time.</p>
+
             </div>
           </div>
-          <div className={styles.ddRow}>
-            <div className={styles.ddIcon}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-              </svg>
-            </div>
-            <div className={styles.ddContent}>
-              <p className={styles.ddTitle}>58.8% timeout is the open problem</p>
-              <p className={styles.ddBody}>Drivers aren't rejecting; they're missing offers mid-delivery. Smarter notification timing, not information design, is what needs to change next.</p>
-              <p className={styles.ddQuote}>"While on time-sensitive gigs" and "actively driving between traffic lights" were the top scenarios where drivers couldn't act on offers.</p>
-            </div>
-          </div>
+       
         </div>
       </section>
 
@@ -227,51 +211,36 @@ export default function FindMeGigs() {
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>THE FIGHT AFTER LAUNCH</p>
         <p className={styles.secHeading}>Drivers lost map access when they accepted an Add-On. It was the wrong call, and the data proved it fast.</p>
-        <p className={styles.bodyText}>At launch, drivers who accepted an Add-On temporarily lost the ability to browse gigs on the map, a restriction built into the initial version. It became the strongest negative reaction in the post-launch survey (149 responses): drivers felt like agency had been taken away. 92% of drivers said they kept manually checking the map anyway, even with Find Me Gigs turned on, evidence that removing the option didn't reduce demand for it. It just added friction.</p>
+        <p className={styles.bodyText}>At launch, drivers who accepted an Add-On temporarily lost the ability to browse gigs on the map, a restriction built into the initial version. It became the strongest negative reaction in the post-launch survey. 92% of drivers said they kept manually checking the map anyway, even with Find Me Gigs turned on, evidence that removing the option didn't reduce demand for it. It just added friction and made drivers feel like agency had been taken away.</p>
         <p className={styles.bodyText}>I pushed data science to remove the restriction and restore map access for drivers already assigned to a gig, addressing the top complaint from the survey directly.</p>
 
         
-        <p className={styles.bodyText}>The rest of the survey findings, more time to review offers, clearer item dimensions, notifications that work with navigation apps, became input for the roadmap, covered in What's Next.</p>
+        <p className={styles.bodyText}>The rest of the survey findings, requests like more time to review offers, clearer item dimensions, notifications that work with navigation apps, all helped influence our product roadmap, covered at the end of the page.</p>
       </section>
 
       {/* IMPACT */}
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>IMPACT</p>
-        <p className={styles.secHeading}>Testing validated the shift from map-hunting to proactive matching.</p>
         <p className={styles.impactIntro}>The original goals were to get drivers off the map while driving, close the pricing gap on gigs with no visible nearby driver, and make picking up additional work effortless. Post-release survey and behavioral data confirmed the approach.</p>
 
-        <div className={styles.impactCols}>
-          <div>
-            <p className={styles.impactColHeading}>Validated outcomes</p>
-            <p className={styles.impactValidatedIntro}>Compared with the prior map-hunting experience, drivers showed:</p>
- 
+        <div>
             <div className={styles.impactStatGrid}>
               <div className={styles.impactStatCard}>
                 <p className={styles.impactStatNum}>58%</p>
-                <p className={styles.impactStatTitle}>Overall acceptance rate on Add-On notifications</p>
-                <p className={styles.impactStatDesc}>Drivers accepted more than half of proactively surfaced offers without manually searching the map.</p>
+                <p className={styles.impactStatTitle}>Overall acceptance rate on Add-On gigs</p>
+                <p className={styles.impactStatDesc}>Drivers accepted more than half of proactively surfaced Add-On offers, resulting in fewer manual map checks and safer behavior on active routes.</p>
               </div>
               <div className={styles.impactStatCard}>
                 <p className={styles.impactStatNum}>4.42/5</p>
                 <p className={styles.impactStatTitle}>Ease-of-use rating from the A/B testing cohort</p>
-                <p className={styles.impactStatDesc}>Measured on accepting gigs in under 60 seconds.</p>
+                <p className={styles.impactStatDesc}>Measured on accepting gigs in under 60 seconds, faster pickup decisions mean higher throughput per driver shift.</p>
               </div>
               <div className={styles.impactStatCard}>
                 <p className={styles.impactStatNum}>$1.03</p>
                 <p className={styles.impactStatTitle}>Saved per gig vs. standard map-published pricing</p>
-                <p className={styles.impactStatDesc}>POTO savings, market level L28.</p>
+                <p className={styles.impactStatDesc}>Proactive matching means gigs get priced accurately instead of assuming no nearby drivers.</p>
               </div>
             </div>
-          </div>
- 
-          <div>
-            <p className={styles.impactColHeading}>Why it mattered</p>
-            <div className={styles.impactPredictedList}>
-              <p className={styles.impactPredictedItem}>📈 Fewer manual map checks → Safer behavior on active routes</p>
-              <p className={styles.impactPredictedItem}>📈 Proactive matching → Gigs priced accurately instead of assuming no nearby driver</p>
-              <p className={styles.impactPredictedItem}>📈 Faster pickup decisions → Higher throughput per driver shift</p>
-            </div>
-          </div>
         </div>
       </section>
 
