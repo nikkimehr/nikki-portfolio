@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Nikki Mehrjerdian — Product Designer',
+  title: 'Nikki Mehrjerdian',
   description: 'Product designer based in Atlanta, Georgia. Currently leading design for the Driver app at Roadie.',
 }
 

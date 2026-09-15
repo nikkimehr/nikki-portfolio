@@ -35,7 +35,9 @@ export default function GigFitCheck() {
         Back to work
       </Link>
 
-      <div className={styles.heroImage} />
+       <div className={styles.heroImage} >
+      <img src="/images/gig-fit-check/gig-fit-check-card.png" alt="Fit Check" />        
+      </div>
 
       {/* HEADER */}
       <section className={styles.header}>

@@ -21,7 +21,10 @@ export default function FindMeGigs() {
         Back to work
       </Link>
 
-      <div className={styles.heroImage} />
+      <div className={styles.heroImage} >
+      <img src="/images/find-me-gigs/find-me-gigs-card.png" alt="Find Me Gigs" />        
+      </div>
+
 
       {/* HEADER */}
       <section className={styles.header}>
