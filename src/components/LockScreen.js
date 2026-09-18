@@ -78,7 +78,7 @@ export default function LockScreen() {
         {error && <p className={styles.error}>That password isn&apos;t right. Try again.</p>}
 
         <p className={styles.footer}>
-          No passcode?{' '}
+          Need the password?{' '}
           <a href="mailto:nikkimehrjerdian8@gmail.com" className={styles.link}>
             Reach out
           </a>

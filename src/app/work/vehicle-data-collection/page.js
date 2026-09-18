@@ -29,7 +29,9 @@ export default function VehicleDataCollection() {
         Back to work
       </Link>
 
-      <div className={styles.heroImage} />
+     <div className={styles.heroImage} >
+       <img src="/images/vehicles/vehicles-card.png" alt="Vehicle Data Collection" />        
+      </div>
 
       {/* HEADER */}
       <div className={styles.header}>

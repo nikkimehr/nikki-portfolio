@@ -64,7 +64,7 @@ export default function FindMeGigs() {
         <p className={styles.secEyebrow}>THE PROBLEM</p>
         <p className={styles.secHeading}>Finding more gigs meant watching the map while driving. Drivers had no better way to do it.</p>
         <p className={styles.bodyText}>Once on a route, drivers could only pick up additional gigs by monitoring the map and submitting offers manually; refreshing while driving, competing with other drivers, waiting for acceptance, all while completing current route tasks. Not only was unsafe and inefficient for drivers, but also for the business since gigs were being priced as if no nearby driver existed.</p>
-        <p className={styles.bodyText} style={{ color: 'var(--blue-primary)', fontWeight: 600 }}>I was brought on this project after data science had already locked the core mechanics. Given the business-led mechanics already in place, my challenge was to make this feature feel trusting, clear, and fair for drivers to encourage adoption.</p>
+        <p className={styles.bodyText} style={{ color: 'var(--blue-primary)', fontWeight: 600 }}>I was brought on this project after data science had already completed the core functionality. Given the business-led mechanics already in place, my challenge was to make this feature feel trusting, clear, and fair for drivers to encourage adoption.</p>
       </section>
 
     
@@ -77,7 +77,7 @@ export default function FindMeGigs() {
             <span className={styles.goalNum}>01</span>
             <div className={styles.ddContent}>
               <p className={styles.ddTitle}>60-second window</p>
-              <p className={styles.ddBody}>Set by the algorithm. Design had to make the offer card scannable in under 5 seconds.</p>
+              <p className={styles.ddBody}>Set by the algorithm. Design had to make the offer card scannable to allow for quick decision making.</p>
             </div>
           </div>
           <div className={styles.ddRow}>
@@ -100,9 +100,14 @@ export default function FindMeGigs() {
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>DISCOVERY</p>
         <p className={styles.bodyText}>Before launch, I conducted driver research to measure comprehension and reaction to the feature. This research effort identified key areas we needed to focus on to ensure a smooth transition when introducing such a drastic change to what drivers had been accustomed to for so long. One of the biggest focus points was factors drivers weigh when offering on a gig.</p>
-        <div className={styles.insightImage}>
-          <img src="/images/decision-factors.png" alt="Top decision factors" style={{ width: '100%', borderRadius: '10px' }} />
-        </div>
+       <div className={styles.insightRow}>
+          <div className={styles.insightImage}>
+            <img src="/images/find-me-gigs/decision-factors.png" alt="Top decision factors" style={{ width: '100%', display: 'block', borderRadius: '10px' }} />
+          </div>
+         <div className={styles.insightImage}>
+            <img src="/images/find-me-gigs/wordle.png" alt="Open response word cloud" style={{ width: '100%', display: 'block', borderRadius: '10px' }} />
+         </div>
+      </div>
         <div className={styles.darkBlock}>
           <p className={styles.darkBlockText}>Pay ranked highest in what drivers said they needed, but it wasn't what drove their decisions. When A/B testing gig offer cards, drivers chose the card that focused on route complexity, stop count alongside time and mileage, over the one that led with pay.</p>
         </div>
@@ -169,22 +174,43 @@ export default function FindMeGigs() {
             <p className={styles.solutionNum}>01</p>
             <p className={styles.solutionTitle}>Getting started with Find Me Gigs</p>
           </div>
+
           <div className={styles.offerFlowLarge}>
-            <div className={styles.offerFlowLargeHeader}>
-              <p className={styles.offerFlowLargeTitle}>Toggle to enable feature</p>
-              <p className={styles.offerFlowLargeDesc}>The toggle is the gate to the entire feature. Once a driver is assigned to a route, they'll be able to view and turn on this toggle to indicate they're open to additional offers.  </p>
+           <div className={styles.gfcFitStates}>
+            <div className={styles.gfcFitState}>
+            <div className={styles.gfcFitStateContent}>
+              <div>
+                <p className={styles.gfcFitTitle}>Toggle to enable feature</p>
+                <p className={styles.gfcFitDesc}>The toggle is the gate to the entire feature. Once a driver is assigned to a route, they'll be able to view and turn on this toggle to indicate they're open to additional offers.</p>
+              </div>
             </div>
-            <Image src="/images/find-me-gigs/feature-education.gif" alt="Feature education screen" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
+              <div className={styles.gfcFitStateGif}>
+              <Image src="/images/find-me-gigs/toggle.gif" alt="Toggle" width={100} height={140} unoptimized />
+            </div>
+            </div>
+          </div>
+            
           </div>
         
-        <div className={styles.offerFlowLarge}>
-            <div className={styles.offerFlowLargeHeader}>
-              <p className={styles.offerFlowLargeTitle}>Feature education</p>
-              <p className={styles.offerFlowLargeDesc}>Before drivers receive their first offer, they're introduced to the feature through an in-app education moment. This sets expectations on what Find Me Gigs is, how the toggle works, and what to expect when an offer arrives.</p>
+         
+
+
+          <div className={styles.offerFlowLarge}>
+
+          <div className={styles.gfcFitStates}>
+            <div className={styles.gfcFitState}>
+            <div className={styles.gfcFitStateContent}>
+              <div>
+                <p className={styles.gfcFitTitle}>Feature education</p>
+                <p className={styles.gfcFitDesc}>Before drivers receive their first offer, they're introduced to the feature through an in-app education moment. This sets expectations on what Find Me Gigs is, how the toggle works, and what to expect when an offer arrives.</p>
+              </div>
             </div>
-            <Image src="/images/find-me-gigs/feature-education.gif" alt="Feature education screen" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
-          </div>
-        </div>
+              <div className={styles.gfcFitStateGif}>
+              <Image src="/images/find-me-gigs/education.gif" alt="Feature education" width={340} height={380} unoptimized />
+            </div>
+            </div>
+          </div></div>
+      </div>
 
         {/* 02 Receiving offers */}
         <div className={styles.solutionPart}>
@@ -192,10 +218,28 @@ export default function FindMeGigs() {
             <p className={styles.solutionNum}>02</p>
             <p className={styles.solutionTitle}>Receiving offers while on a route</p>
           </div>
-          <p className={styles.bodyText}>Early concepts led with pay, which matched what drivers said they wanted most. Testing showed that was the wrong call: in a head-to-head test, drivers chose the version leading with route complexity, stops, time, and mileage 69% of the time, rating it 4.42/5 for ease of accepting versus 31% for the pay-first version.</p>
+          <p className={styles.bodyText}>Early concepts led with pay, which matched what drivers said they wanted most during our initial round of research. However, usability testing showed that was the wrong call. When A/B testing two versions of the offer card, drivers chose the version leading with route complexity, stops, time, and mileage 69% of the time, rating it 4.42/5 for ease of accepting versus 31% for the pay-first version.</p>
+          
           <p className={styles.ddQuote} >"It's easier to see the details of the additional time and stops. The other puts too much emphasis on the total payment."</p>
-          <p className={styles.bodyText}>The shipped card leads with route impact, pay second: push notifications rank pay, mileage, pickup location, gig size, and item dimensions in that tested order, with the pickup shown on the map in context of the current route. A visible but unobtrusive countdown lets drivers stay focused on the road.</p>
-            <Image src="/images/find-me-gigs/offer-card.gif" alt="Offer card appearance, details, and map integration after accept" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
+          <div className={styles.explorationItem}>
+            <Image src="/images/find-me-gigs/testingdesigns.png" alt="Designs" width={600} height={300} className={styles.solutionImage} unoptimized />
+          </div>          
+        </div>
+
+          <div className={styles.offerFlowLarge}>
+
+        <div className={styles.gfcFitStates}>
+            <div className={styles.gfcFitState}>
+            <div className={styles.gfcFitStateContent}>
+              <div>
+                <p className={styles.gfcFitDesc}>The shipped card leads with route impact, pay second: push notifications rank pay, mileage, pickup location, gig size, and item dimensions in that tested order, with the pickup shown on the map in context of the current route. A visible but unobtrusive countdown lets drivers stay focused on the road.</p>
+              </div>
+            </div>
+              <div className={styles.gfcFitStateGif}>
+              <Image src="/images/find-me-gigs/acceptnewoffer.gif" alt="Offer card" width={340} height={380} unoptimized />
+            </div>
+            </div>
+          </div>
         </div>
 
 <div className={styles.solutionPart}>
@@ -203,8 +247,23 @@ export default function FindMeGigs() {
             <p className={styles.solutionNum}>03</p>
             <p className={styles.solutionTitle}>Capturing rejection reasons in the moment</p>
           </div>
-          <p className={styles.bodyText}>Rather than wait for the next research cycle, we added an in-app prompt after a driver declines an Add-On, capturing why in the moment. It gave us an ongoing read on rejection reasons instead of relying on periodic surveys alone.</p>
-            <Image src="/images/find-me-gigs/offer-card.gif" alt="Offer card appearance, details, and map integration after accept" width={800} height={450} unoptimized className={styles.gifPlaceholder} />
+
+          <div className={styles.offerFlowLarge}>
+
+          <div className={styles.gfcFitStates}>
+            <div className={styles.gfcFitState}>
+            <div className={styles.gfcFitStateContent}>
+              <div>
+                <p className={styles.gfcFitDesc}>Rather than wait for the next research cycle, we added an in-app prompt after a driver declines an Add-On, capturing why in the moment. It gave us an ongoing read on rejection reasons instead of relying on periodic surveys alone.</p>
+              </div>
+            </div>
+              <div className={styles.gfcFitStateGif}>
+              <Image src="/images/find-me-gigs/decline.gif" alt="Decline feedback" width={340} height={380} unoptimized />
+            </div>
+            </div>
+          </div></div>
+
+
         </div>
 
 
@@ -251,14 +310,14 @@ export default function FindMeGigs() {
       {/* WHAT'S NEXT */}
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>WHAT'S NEXT</p>
-        <p className={styles.bodyText}>Find Me Gigs laid the groundwork for a larger platform shift; moving from a model where drivers hunt for gigs on a map to a dispatch model where the platform does the matching, whether a driver is on a route or not. The next phase of this work is currently being worked on and will expand to allow for offers when drivers are not already assigned to gigs.</p>
+        <p className={styles.bodyText}>Find Me Gigs laid the groundwork for a larger platform shift - moving from a model where drivers constantly hunt for gigs on the map to a dispatch model where the platform does the matching, whether a driver is on a route or not. The next phase of this work is currently being worked on and will expand to allow for offers when drivers are not already assigned to gigs.</p>
       </section>
 
       <div className={styles.nextProject}>
         <div>
           <p className={styles.nextLabel}>NEXT PROJECT</p>
-          <Link href="/work/vehicle-data-collection" className={styles.nextTitle}>
-            Vehicle Data Collection →
+          <Link href="/work/verizon-smart-family" className={styles.nextTitle}>
+            Smart Family Locations →
           </Link>
         </div>
       </div>
@@ -267,3 +326,4 @@ export default function FindMeGigs() {
     </>
   )
 }
+
