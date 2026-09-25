@@ -67,8 +67,15 @@ export default function VerizonCloudOffboarding() {
         <p className={styles.secEyebrow}>CURRENT OFFBOARDING PROBLEM</p>
         <p className={styles.secHeading}>The current experience lacks crucial guidance to help customers make informed decisions or save their data before it's deleted.</p>
         <p className={styles.bodyText}>Verizon Cloud's current offboarding experience is relatively straightforward and takes very little time to complete. However, this experience lacks crucial guidance to help customers make informed decisions or how to save their data before it's completely deleted.</p>
-        <div className={styles.imagePlaceholder} style={{ marginTop: '20px' }}>[Insert: Current state offboarding experience screens]</div>
+         
+         <div className={styles.insightRow}>
+          <div className={styles.insightImage}>
+            <img src="/images/vco/currentstate.png" alt="Current Offboarding Flow" style={{ width: '100%', display: 'block', borderRadius: '10px' }} />
+          </div>
+          </div>
+        
       </section>
+
 
       {/* HMW */}
       <section className={styles.sec}>
@@ -150,7 +157,14 @@ export default function VerizonCloudOffboarding() {
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>MARKET RESEARCH</p>
         <p className={styles.bodyText}>After identifying the key pain points from the current state, I worked alongside our researcher to do a competitive analysis of in-category and out-of-category products to analyze successful experiences across the market landscape and highlight opportunities to position Verizon Cloud in-line with industry experiences.</p>
-        <div className={styles.imagePlaceholder} style={{ marginTop: '16px', aspectRatio: '16/4' }}>[Insert: Competitor logos — iCloud, Dropbox, Google Drive, Gmail, Twitter, Box]</div>
+        
+        <div className={styles.insightRow}>
+          <div className={styles.insightImage}>
+            <img src="/images/vco/comps.png" alt="Competitors" style={{ width: '100%', display: 'block', borderRadius: '10px' }} />
+          </div>
+          </div>
+
+
         <p className={styles.secHeading} style={{ marginTop: '28px' }}>Key takeaways</p>
         <div className={styles.goalsList} style={{ marginTop: '12px' }}>
           {[
