@@ -188,18 +188,18 @@ export default function VerizonCloudOffboarding() {
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>DESIGN GOALS</p>
         <p className={styles.bodyText}>Synthesizing our research, we established a set of design goals using the Verizon brand guidelines to use as our guiding principles for the new offboarding experience.</p>
-        <div className={styles.cardGrid3} style={{ marginTop: '16px' }}>
-          <div className={styles.card}>
-            <p className={styles.cardTitle}>Supportive</p>
-            <p className={styles.cardBody}>The service provides useful prompts to guide the user through any complex actions required to achieve their goal, anticipating their needs and offering potential solutions — like downgrade suggestions — to help retain customers.</p>
+        <div className={styles.problemGrid}>
+          <div className={styles.problemCard}>
+            <p className={styles.problemTitle}>Supportive</p>
+            <p className={styles.problemBody}>The service provides useful prompts to guide the user through any complex actions required to achieve their goal, anticipating their needs and offering potential solutions — like downgrade suggestions — to help retain customers.</p>
           </div>
-          <div className={styles.card}>
-            <p className={styles.cardTitle}>Personal</p>
-            <p className={styles.cardBody}>These experiences show users we recognize and understand them by delivering unique experiences that are just for them, dynamically surfacing their most used features, custom content, or most viewed content.</p>
+          <div className={styles.problemCard}>
+            <p className={styles.problemTitle}>Personal</p>
+            <p className={styles.problemBody}>These experiences show users we recognize and understand them by delivering unique experiences that are just for them, dynamically surfacing their most used features, custom content, or most viewed content.</p>
           </div>
-          <div className={styles.card}>
-            <p className={styles.cardTitle}>Honest</p>
-            <p className={styles.cardBody}>These experiences are transparent and clearly communicate information regarding the users privacy and data — how long photos will be kept, what will happen to their files, and the retrieval process — with shared plan owners notified of any changes.</p>
+          <div className={styles.problemCard}>
+            <p className={styles.problemTitle}>Honest</p>
+            <p className={styles.problemBody}>These experiences are transparent and clearly communicate information regarding the users privacy and data — how long photos will be kept, what will happen to their files, and the retrieval process — with shared plan owners notified of any changes.</p>
           </div>
         </div>
       </section>

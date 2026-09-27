@@ -23,7 +23,7 @@ const projects = [
     company: 'Roadie',
     title: 'Multi-phase effort to collect & build vehicle data foundation',
     tags: ['Mobile', 'Web'],
-    cardSrc: '/images/vehicles/vehicles-soon.png',
+    cardSrc: '/images/vehicles/Vehicles-soon.png',
   },
   {
     slug: 'verizon-smart-family',

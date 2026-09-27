@@ -21,7 +21,7 @@ export default function VerizonOnboarding() {
       </Link>
 
       <div className={styles.heroImage} >
-      <img src="images/vsf-onboarding/verizon-smart-family-onboarding-card.png" alt="Verizon Smart Family Onboarding" />        
+        <img src="/images/vsf-onboarding/verizon-smart-family-onboarding-card.png" alt="Verizon Smart Family Onboarding" />      
       </div>
 
       {/* HEADER */}
