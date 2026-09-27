@@ -186,14 +186,14 @@ export default function GigFitCheck() {
           <div>
             <span className={styles.gfcPill}>PHASE 1</span>
             <p className={styles.gfcTitle}>Remove Size Tags, Introduce Item Descriptor Tags</p>
-            <p className={styles.gfcBody}>One of the new initiatives I advocated for was introducing Item Descriptors to better highlight specific item characteristics, serving as the foundation for the entire rollout. Introducing three specific characteristic tags based on user feedback to improve item descriptions. Surface tags in correlation to items they are tied to in order to provide better guidance to drivers.</p>
+            <p className={styles.gfcBody}>I advocated for introducing Item Descriptors, three characteristic tags based on driver feedback that better highlight specific item traits and serve as the foundation for the entire rollout. Tags surface in direct correlation to the items they describe, giving drivers clearer guidance before they offer on a gig.</p>
+            <div className={styles.gfcMetric}>
+                <p className={styles.gfcMetricValue}>[Metric 1]</p>
+                <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
+            </div>
           </div>
           <div className={styles.gfcPhaseVisual}>
             <Image src="/images/gig-fit-check/phase1.png" alt="phase1" width={400} height={700} unoptimized className={styles.explorationImage} />
-            <div className={styles.gfcMetric}>
-              <p className={styles.gfcMetricValue}>[Metric 1]</p>
-              <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
-            </div>
           </div>
         </div>
       </section>
@@ -206,13 +206,14 @@ export default function GigFitCheck() {
             <p className={styles.gfcTitle}>Removal of All Gig Sizes</p>
             <p className={styles.gfcBody}>Deprecate the T-shirt size labels to eliminate reliance on misleading descriptions and reduce support tickets when discrepancies occur between the sizes and the items at pickup.</p>
             <p className={styles.gfcBody}>This was a particularly sensitive area for our support and internal teams, so I worked with product to incrementally phase out the old sizes over several months, rather than all at once, to avoid a spike in support volume.</p>
-          </div>
-          <div className={styles.gfcPhaseVisual}>
-          <Image src="/images/gig-fit-check/phase2.png" alt="phase2" width={400} height={700} unoptimized className={styles.explorationImage} />            
-          <div className={styles.gfcMetric}>
+           <div className={styles.gfcMetric}>
               <p className={styles.gfcMetricValue}>[Metric 1]</p>
               <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
             </div>
+          </div>
+          <div className={styles.gfcPhaseVisual}>
+          <Image src="/images/gig-fit-check/phase2.png" alt="phase2" width={400} height={700} unoptimized className={styles.explorationImage} />            
+          
           </div>
         </div>
       </section>
@@ -222,7 +223,12 @@ export default function GigFitCheck() {
   <div className={styles.gfcPhaseHeader}>
     <span className={styles.gfcPill}>PHASE 3</span>
     <p className={styles.gfcTitle}>Gig Fit Check</p>
-    <p className={styles.gfcBody}>Determining fit based on vehicle volume, available capacity and item volume. Dynamic and streamlined approach to decisively communicate to drivers if they're fit to take on a Gig before offering.</p>
+    <p className={styles.gfcBody}>The core of the rollout: a dynamic fit assessment based on a driver's vehicle capacity, gig volume and dimensions. Rather than a static label, drivers now have a real-time signal, so they can confidently understand whether their vehicle is fit to take on a Gig before offering.
+    </p>
+    <div className={styles.gfcMetric}>
+    <p className={styles.gfcMetricValue}>60%</p>
+    <p className={styles.gfcMetricLabel}>Reduction in daily size-related support cases since launch</p>
+  </div>
   </div>
 
   <div className={styles.gfcFitStates}>
@@ -231,7 +237,7 @@ export default function GigFitCheck() {
         <span className={styles.gfcFitDot} style={{ background: '#0f6e56' }} />
         <div>
           <p className={styles.gfcFitTitle}>Easy Fit</p>
-          <p className={styles.gfcFitDesc}>Items should fit without any issues in the active vehicle</p>
+          <p className={styles.gfcFitDesc}>Items should fit without any issues in the active vehicle. This accounts for 80% of the driver's vehicle capacity.</p>
         </div>
       </div>
       <div className={styles.gfcFitStateGif}>
@@ -244,7 +250,7 @@ export default function GigFitCheck() {
         <span className={styles.gfcFitDot} style={{ background: '#e6a817' }} />
         <div>
           <p className={styles.gfcFitTitle}>Tight Fit</p>
-          <p className={styles.gfcFitDesc}>Total volume & dimensions of existing Gigs and/or available Gig may be over threshold of what vehicle can typically handle</p>
+          <p className={styles.gfcFitDesc}>Total volume & dimensions of existing Gigs and/or available Gig may be over threshold of what vehicle can typically handle, going slightly above the 100% vehicle capacity.</p>
         </div>
       </div>
       <div className={styles.gfcFitStateGif}>
@@ -265,11 +271,7 @@ export default function GigFitCheck() {
       </div>
     </div>
   </div>
-
-  <div className={styles.gfcMetric}>
-    <p className={styles.gfcMetricValue}>[Metric 1]</p>
-    <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
-  </div>
+  
 </section>
 
 
@@ -339,7 +341,6 @@ export default function GigFitCheck() {
         </div>
 
         <p className={styles.bodyText} style={{ marginTop: '1.5rem' }}>Of 719 fit-related comments across 696 gigs in a two-week window, the ask from drivers wasn&apos;t &ldquo;remove this feature,&rdquo; it was &ldquo;make it more accurate.&rdquo; That is currently steering the next phase of work, leading with improved logic and vehicle mapping on the backend side.</p>
-        <p className={styles.bodyText} style={{ marginTop: '2rem' }}><b>Lots more work in progress for this feature!</b></p>
 
       </section>
 
@@ -349,15 +350,19 @@ export default function GigFitCheck() {
         <p className={styles.darkSectionBody}>Advocating for this incremental approach was the turning point for the project. By shifting from a single launch to a phased rollout, we secured stakeholder buy-in and gave engineering the necessary runway to build the technical core for Fit Check. This was also a major UX win for two reasons:</p>
         <div className={styles.darkSectionGrid}>
           <div className={styles.darkSectionCard}>
-            <p className={styles.darkSectionCardTitle}>Building Trust</p>
-            <p className={styles.darkSectionCardBody}>It allowed us to prove the value of the data and build driver confidence before introducing the more complex automated logic.</p>
+            <p className={styles.darkSectionCardTitle}>Building Driver Trust</p>
+            <p className={styles.darkSectionCardBody}>Roadie drivers have often been hesitant to trust platform changes, uncertain how they'll affect their ability to find gigs. This approach let us prove the value of the data and build driver confidence before introducing the more complex automated logic.</p>
           </div>
           <div className={styles.darkSectionCard}>
-            <p className={styles.darkSectionCardTitle}>Operational Stability</p>
-            <p className={styles.darkSectionCardBody}>It ensured each team had the time to get the foundations right, preventing a fragmented experience that would have further burdened support.</p>
+            <p className={styles.darkSectionCardTitle}>Operational & Engineering Stability</p>
+            <p className={styles.darkSectionCardBody}>Roadie has traditionally leaned toward faster feature rollouts, aiming to test then iterate. But given the complexity of this feature, we slowed that process down, giving each team the time to get the foundations right and avoiding a fragmented experience that would have further burdened support..</p>
           </div>
         </div>
       </div>
+
+      <section className={styles.sec}>       
+          <p className={styles.bodyText}><b>Much more to come on this feature! I'm currently working on the next phase of improvements based on continued driver feedback and data analysis. Stay tuned for more!</b></p>
+      </section>
 
 
 

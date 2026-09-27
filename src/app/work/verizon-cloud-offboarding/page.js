@@ -361,8 +361,8 @@ export default function VerizonCloudOffboarding() {
             </div>
             <div className={styles.cardPlain}>
               <p className={styles.cardPlainLabel}>Solution</p>
-              <ul className={styles.cardPlainList}>
-                <li>Using authentication methods to confirm this destructive action while notifying users of the re-enrollment and recovery process.</li>
+              <ul className={styles.cardPlainBody}>
+                <p>Using authentication methods to confirm this destructive action while notifying users of the re-enrollment and recovery process.</p>
               </ul>
             </div>
           </div>
@@ -393,8 +393,8 @@ export default function VerizonCloudOffboarding() {
             </div>
             <div className={styles.cardPlain}>
               <p className={styles.cardPlainLabel}>Solution</p>
-              <ul className={styles.cardPlainList}>
-                <li>Desktop users have the option to receive verification code through text message or email to complete this step. From there, they will see a confirmation modal with additional details and they will be guided to exit cloud which will then bring them to the welcome page.</li>
+              <ul className={styles.cardPlainBody}>
+                <p>Desktop users have the option to receive verification code through text message or email to complete this step. From there, they will see a confirmation modal with additional details and they will be guided to exit cloud which will then bring them to the welcome page.</p>
               </ul>
             </div>
           </div>

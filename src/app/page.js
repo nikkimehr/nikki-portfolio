@@ -23,7 +23,7 @@ const projects = [
     company: 'Roadie',
     title: 'Multi-phase effort to collect & build vehicle data foundation',
     tags: ['Mobile', 'Web'],
-    cardSrc: '/images/vehicles/vehicles-card.png',
+    cardSrc: '/images/vehicles/vehicles-soon.png',
   },
   {
     slug: 'verizon-smart-family',
@@ -70,7 +70,27 @@ export default function Home() {
       <section className={styles.workSection} id="work">
         <p className={`bracket-label ${styles.sectionLabel}`}>Selected Work</p>
         <div className={styles.cardsGrid}>
-          {gridProjects.map(project => (
+         {gridProjects.map(project => {
+          if (project.slug === 'vehicle-data-collection') {
+            return (
+              <div key={project.slug} className={styles.card} style={{ pointerEvents: 'none' }}>
+                <div className={styles.cardImageSmall}>
+                  <img src={project.cardSrc} alt={project.title} />
+                </div>
+                <div className={styles.cardContent}>
+                  <p className={styles.cardCompany}>{project.company}</p>
+                  <h2 className={styles.cardTitleSmall}>{project.title}</h2>
+                  <div className="tags">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )
+          }
+
+          return (
             <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
               <div className={styles.cardImageSmall}>
                 <img src={project.cardSrc} alt={project.title} />
@@ -85,7 +105,8 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-          ))}
+          )
+})}
         </div>
 
       </section>

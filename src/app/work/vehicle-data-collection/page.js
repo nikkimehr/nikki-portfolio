@@ -194,6 +194,11 @@ export default function VehicleDataCollection() {
         </div>
       </section>} */}
 
+{/* LEARNINGS TAKEAWAY */}
+      <div className={styles.darkSection} style={{ marginBottom: '2rem' }}>
+        <p className={styles.darkSectionEyebrow}>LEARNINGS & TAKEAWAY</p>
+        <p className={styles.darkSectionBody}>ADS</p>
+      </div>
 
       {/* NEXT PROJECT */}
       <div className={styles.nextProject}>

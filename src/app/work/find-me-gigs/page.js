@@ -283,25 +283,26 @@ export default function FindMeGigs() {
       {/* IMPACT */}
       <section className={styles.sec}>
         <p className={styles.secEyebrow}>IMPACT</p>
-        <p className={styles.impactIntro}>The original goals were to get drivers off the map while driving, close the pricing gap on gigs with no visible nearby driver, and make picking up additional work effortless. Post-release survey and behavioral data confirmed the approach.</p>
+        <p className={styles.impactIntro}>The original goals were to get drivers off the map while driving, close the pricing gap on gigs with no visible nearby driver, and make picking up additional work effortless. Post-release tracking data confirmed the approach.</p>
 
         <div>
             <div className={styles.impactStatGrid}>
               <div className={styles.impactStatCard}>
                 <p className={styles.impactStatNum}>58%</p>
-                <p className={styles.impactStatTitle}>Overall acceptance rate on Add-On gigs</p>
-                <p className={styles.impactStatDesc}>Drivers accepted more than half of proactively surfaced Add-On offers, resulting in fewer manual map checks and safer behavior on active routes.</p>
+                <p className={styles.impactStatTitle}>Overall acceptance rate on Add-On gig offers</p>
+                <p className={styles.impactStatDesc}>Since launch, drivers have accepted more than half of Add-On offers, resulting in fewer manual map checks and safer behavior on active routes.</p>
               </div>
               <div className={styles.impactStatCard}>
-                <p className={styles.impactStatNum}>4.42/5</p>
-                <p className={styles.impactStatTitle}>Ease-of-use rating from the A/B testing cohort</p>
-                <p className={styles.impactStatDesc}>Measured on accepting gigs in under 60 seconds, faster pickup decisions mean higher throughput per driver shift.</p>
+                <p className={styles.impactStatNum}>56%</p>
+                <p className={styles.impactStatTitle}>Drivers opting into add-on gigs on a weekly basis</p>
+                <p className={styles.impactStatDesc}>From the release, we saw more drivers toggle the feature on and keep it on. During peak volume days, opt-ins rose 95% above baseline.</p>
               </div>
-              <div className={styles.impactStatCard}>
+                <div className={styles.impactStatCard}>
                 <p className={styles.impactStatNum}>$1.03</p>
                 <p className={styles.impactStatTitle}>Saved per gig vs. standard map-published pricing</p>
-                <p className={styles.impactStatDesc}>Proactive matching means gigs get priced accurately instead of assuming no nearby drivers.</p>
+                <p className={styles.impactStatDesc}>Proactive acceptance means gigs get priced accurately, resulting in benefits for the business.</p>
               </div>
+              
             </div>
         </div>
       </section>
