@@ -1,5 +1,6 @@
 import './globals.css'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
   title: 'Nikki Mehrjerdian',
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+        <Analytics />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Z4FQCJCFNL"
           strategy="afterInteractive"
