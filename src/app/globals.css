@@ -108,15 +108,13 @@ footer {
   background: var(--navy);
 }
 .footer-sub {
-  color: var(--blue-secondary);
+  color: #ffffff;
   margin-bottom: 24px;
-
   font-size: 16px;
   font-weight: 800;
-
- 
-  
 }
+
+
 .footer-icons {
   display: flex;
   align-items: center;
