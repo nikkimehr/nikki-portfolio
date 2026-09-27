@@ -66,7 +66,7 @@ export default function GigFitCheck() {
           </div>
           <div className={styles.metaItem}>
             <p className={styles.metaLabel}>OUTCOME</p>
-            <p className={styles.metaVal}>Shipped - live for 75% of drivers</p>
+            <p className={styles.metaVal}>Shipped - live for 100% of drivers</p>
           </div>
         </div>
       </section>
@@ -187,9 +187,17 @@ export default function GigFitCheck() {
             <span className={styles.gfcPill}>PHASE 1</span>
             <p className={styles.gfcTitle}>Remove Size Tags, Introduce Item Descriptor Tags</p>
             <p className={styles.gfcBody}>I advocated for introducing Item Descriptors, three characteristic tags based on driver feedback that better highlight specific item traits and serve as the foundation for the entire rollout. Tags surface in direct correlation to the items they describe, giving drivers clearer guidance before they offer on a gig.</p>
+            
+            <div className={styles.gfcMetricRow}>
             <div className={styles.gfcMetric}>
-                <p className={styles.gfcMetricValue}>[Metric 1]</p>
-                <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
+                <p className={styles.gfcMetricValue}>12% decrease</p>
+                <p className={styles.gfcMetricLabel}>in number of support tickets related to drivers requesting pay increase due to discrepancy in item description at pickup</p>
+            </div>
+             <div className={styles.gfcMetric}>
+                <p className={styles.gfcMetricValue}>53% decrease</p>
+                <p className={styles.gfcMetricLabel}>in number of "item didn't match description" feedback</p>
+            </div>
+           
             </div>
           </div>
           <div className={styles.gfcPhaseVisual}>
@@ -206,9 +214,12 @@ export default function GigFitCheck() {
             <p className={styles.gfcTitle}>Removal of All Gig Sizes</p>
             <p className={styles.gfcBody}>Deprecate the T-shirt size labels to eliminate reliance on misleading descriptions and reduce support tickets when discrepancies occur between the sizes and the items at pickup.</p>
             <p className={styles.gfcBody}>This was a particularly sensitive area for our support and internal teams, so I worked with product to incrementally phase out the old sizes over several months, rather than all at once, to avoid a spike in support volume.</p>
+           
+           <div className={styles.gfcMetricRow}>
            <div className={styles.gfcMetric}>
-              <p className={styles.gfcMetricValue}>[Metric 1]</p>
-              <p className={styles.gfcMetricLabel}>Description of what changed or improved</p>
+              <p className={styles.gfcMetricValue}>40% decrease</p>
+              <p className={styles.gfcMetricLabel}>in daily size-related support cases since incremental size removals, beginning with Small, Medium, Large then expanding to include Extra Large and Huge</p>
+            </div>
             </div>
           </div>
           <div className={styles.gfcPhaseVisual}>
@@ -225,9 +236,15 @@ export default function GigFitCheck() {
     <p className={styles.gfcTitle}>Gig Fit Check</p>
     <p className={styles.gfcBody}>The core of the rollout: a dynamic fit assessment based on a driver's vehicle capacity, gig volume and dimensions. Rather than a static label, drivers now have a real-time signal, so they can confidently understand whether their vehicle is fit to take on a Gig before offering.
     </p>
+    <div className={styles.gfcMetricRow}>
     <div className={styles.gfcMetric}>
-    <p className={styles.gfcMetricValue}>60%</p>
-    <p className={styles.gfcMetricLabel}>Reduction in daily size-related support cases since launch</p>
+    <p className={styles.gfcMetricValue}>60% reduction</p>
+    <p className={styles.gfcMetricLabel}>in daily size-related support cases since launch of Fit Check</p>
+    </div>
+     <div className={styles.gfcMetric}>
+                <p className={styles.gfcMetricValue}>22% decrease</p>
+                <p className={styles.gfcMetricLabel}>in number of drivers that had to cancel gig at pickup due to items not fitting in their vehicle</p>
+            </div>
   </div>
   </div>
 
@@ -360,10 +377,10 @@ export default function GigFitCheck() {
         </div>
       </div>
 
-      <section className={styles.sec}>       
-          <p className={styles.bodyText}><b>Much more to come on this feature! I'm currently working on the next phase of improvements based on continued driver feedback and data analysis. Stay tuned for more!</b></p>
+ <section className={styles.sec}>
+        <p className={styles.secEyebrow}>WHAT'S NEXT</p>
+        <p className={styles.bodyText}>I'm currently working on the next phase of improvements based on continued driver feedback and data analysis. Much more to come on this feature!</p>
       </section>
-
 
 
 
