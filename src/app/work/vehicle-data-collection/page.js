@@ -9,9 +9,6 @@ export const metadata = {
   title: 'Vehicle Data Collection — Nikki Mehrjerdian',
 }
 
-// Drop image paths here when screens are ready — up to 4 per state, per
-// phase, rendered left to right at equal height with no background/card
-// behind them. The toggle below each phase switches between these sets.
 const phase1Screens = { before: [], after: [] }
 const phase2Screens = { before: [], after: [] }
 const phase3Screens = { before: [], after: [] }
